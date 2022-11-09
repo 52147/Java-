@@ -20,6 +20,16 @@ Thread takes turn use the cpu.
 ## Parallel
 - When cpu have multiple cores, every core can schedule the thread, so the schedule can be used in parallel.
 - ![image](https://user-images.githubusercontent.com/79159894/200863722-bba33c2c-5a6f-4bd4-bb44-2fe795485b41.png)
+
+## Common Function
+| Method | static|Description|Notice|
+| ------------- | ------------- |------------- |------------- |
+| start()  | |start a new thread and run the code that in the run() | start() is used to let thread stand by, not immediately execute the code. Each start() can only be called one, if we use strart multiple time, it will appear IllegalThreadStateException. | 
+| run() | |node.js, express.js |https://tranquil-citadel-69579.herokuapp.com/ |
+| join()| |node.js, express.js|
+| join(long n) ||node.js, express.js|
+
+
 ## Reference
 - https://www.bilibili.com/video/BV16J411h7Rd/?p=6&spm_id_from=pageDriver
 
