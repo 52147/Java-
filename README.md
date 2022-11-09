@@ -29,6 +29,10 @@ Thread takes turn use the cpu.
 | join()| |node.js, express.js|
 | join(long n) ||node.js, express.js|
 
+
+## Create Multiple Thread
+- https://leetcode.com/playground/E4jwqJmo
+- https://stackoverflow.com/questions/9658517/java-creating-multiple-threads-with-a-for-loop
 ## Stop thread execution after the certain time 
 ### One Thread
 - https://stackoverflow.com/questions/2733356/killing-thread-after-some-specified-time-limit-in-java
