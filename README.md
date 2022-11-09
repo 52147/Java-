@@ -15,12 +15,11 @@
 ## Concurrent
 
 Thread takes turn use the cpu.
-- ![image](https://user-images.githubusercontent.com/79159894/200861757-2fa6b4cf-1676-4959-8a66-77dde86432ca.png)
+- ![image](https://user-images.githubusercontent.com/79159894/200863867-fd2b0a1b-81bd-4471-ae7f-9e32c60d5b6a.png)
 
 ## Parallel
 - When cpu have multiple cores, every core can schedule the thread, so the schedule can be used in parallel.
-- ![image](https://user-images.githubusercontent.com/79159894/200861818-4f8892fa-dc9e-4015-9a7b-400d2d0d0a63.png)
-
+- ![image](https://user-images.githubusercontent.com/79159894/200863722-bba33c2c-5a6f-4bd4-bb44-2fe795485b41.png)
 ## Reference
 - https://www.bilibili.com/video/BV16J411h7Rd/?p=6&spm_id_from=pageDriver
 
