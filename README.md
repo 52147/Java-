@@ -29,7 +29,12 @@ Thread takes turn use the cpu.
 | join()| |node.js, express.js|
 | join(long n) ||node.js, express.js|
 
+## Stop thread execution after the certain time 
+### One Thread
 
+### Multiple Thread
+- https://www.baeldung.com/java-stop-execution-after-certain-time
+- https://stackoverflow.com/questions/2275443/how-to-timeout-a-thread
 ## Reference
 - https://www.bilibili.com/video/BV16J411h7Rd/?p=6&spm_id_from=pageDriver
 
