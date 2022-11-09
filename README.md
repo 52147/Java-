@@ -31,10 +31,12 @@ Thread takes turn use the cpu.
 
 ## Stop thread execution after the certain time 
 ### One Thread
+- https://stackoverflow.com/questions/2733356/killing-thread-after-some-specified-time-limit-in-java
 
 ### Multiple Thread
 - https://www.baeldung.com/java-stop-execution-after-certain-time
 - https://stackoverflow.com/questions/2275443/how-to-timeout-a-thread
+- https://stackoverflow.com/questions/10359357/time-limit-on-the-execution-of-a-java-function
 ## Reference
 - https://www.bilibili.com/video/BV16J411h7Rd/?p=6&spm_id_from=pageDriver
 
