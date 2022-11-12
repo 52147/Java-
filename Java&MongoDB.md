@@ -34,3 +34,4 @@ db.createUser( {user:"mongoloide", pwd:"mongoloide*2017", roles:["root"]} )
 ```
 root can only be used in the admin database and has all privileges.
 ![image](https://user-images.githubusercontent.com/79159894/201467234-5d876392-c896-4754-a907-ae90ce7c4562.png)
+- Return 1 means we successfully login
