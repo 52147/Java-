@@ -424,7 +424,7 @@ db1> db.item.stats()
 
 
 - drop collection
-![image](https://user-images.githubusercontent.com/79159894/201472608-108cd3dc-980a-4169-a91b-d8857e4e866c.png)
+- ![image](https://user-images.githubusercontent.com/79159894/201472608-108cd3dc-980a-4169-a91b-d8857e4e866c.png)
 ```
 db1> db.createCollection("tmp")
 { ok: 1 }
