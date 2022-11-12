@@ -132,5 +132,14 @@ todolistDB  144.00 KiB
 wikiDB       80.00 KiB
 ```
 ## Collection
-Collection is table in mongodb.
-creat a collection 
+- Collection is table in mongodb.
+- create a new db db1 and add a new collection item in it.
+![image](https://user-images.githubusercontent.com/79159894/201469509-d089907e-5dbf-46ce-9965-c4bd7c2739a0.png)
+```
+622DB> use db1
+switched to db db1
+db1> db.createCollection("item")
+{ ok: 1 }
+db1> show tables
+item
+```
