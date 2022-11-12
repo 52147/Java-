@@ -117,3 +117,16 @@ test> db.test.insertOne({"name":"shoutzu han"})
 test> show dbs
 ```
 ![image](https://user-images.githubusercontent.com/79159894/201469047-8533f471-0dd3-4547-a503-be96ac55fcbb.png)
+Drop the test db.
+```
+test> db.dropDatabase()
+{ ok: 1, dropped: 'test' }
+test> show dbs
+622DB         8.09 MiB
+admin       180.00 KiB
+blogDB       72.00 KiB
+config      108.00 KiB
+local        80.00 KiB
+todolistDB  144.00 KiB
+wikiDB       80.00 KiB
+```
