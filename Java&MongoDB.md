@@ -20,4 +20,7 @@
 show dbs
 ```
 ![image](https://user-images.githubusercontent.com/79159894/201466881-825fb50c-6ba2-45ab-bbf1-b2b1460e8e9f.png)
-
+- close the shell
+```
+exit
+```
