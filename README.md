@@ -1,6 +1,5 @@
-# Java 面試問題
+# Thread & Process
 
-## Thread & Process
 ## Thread
 - Thread is used to decribe a process that load the command to CPU and manage the memory and io for running a porgram.
 - When we start run a program, meaning start to load this program form disk to memory, we start a process.
