@@ -16,6 +16,8 @@
 ![image](https://user-images.githubusercontent.com/79159894/201466864-6188fc47-8222-483d-913d-3417fe9a3a24.png)
 
 - show all database
+```
 show dbs
+```
 ![image](https://user-images.githubusercontent.com/79159894/201466881-825fb50c-6ba2-45ab-bbf1-b2b1460e8e9f.png)
 
