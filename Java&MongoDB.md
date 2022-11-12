@@ -98,3 +98,15 @@ admin> db.system.users.find()
   }
 ]
 ```
+
+## Create new DB
+If we don't have test db, mongodb will create it.
+```
+use test
+```
+But if we don't add any data in test db.
+We can use show tables to see data in test db.
+We use show db, test db would not gonna show out.
+```
+![image](https://user-images.githubusercontent.com/79159894/201468468-64154df5-49b6-4af7-a1af-7a97fd7d74f9.png)
+```
