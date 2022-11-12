@@ -118,7 +118,7 @@ test> show dbs
 ```
 ![image](https://user-images.githubusercontent.com/79159894/201469047-8533f471-0dd3-4547-a503-be96ac55fcbb.png)
 - Drop the test db.
-- 1 means successfully drop, 0 means fail.
+- 1 means successfully drop, 0 means fail. Database names differ in `lowercase and uppercase`.
 ```
 test> db.dropDatabase()
 { ok: 1, dropped: 'test' }
@@ -131,3 +131,6 @@ local        80.00 KiB
 todolistDB  144.00 KiB
 wikiDB       80.00 KiB
 ```
+## Collection
+Collection is table in mongodb.
+creat a collection 
