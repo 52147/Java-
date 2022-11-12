@@ -40,3 +40,5 @@ root can only be used in the admin database and has all privileges.
 show users
 ```
 ![image](https://user-images.githubusercontent.com/79159894/201467980-368bda22-51ce-449e-a31d-a1217471ac4c.png)
+- mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ]
+- means we use two type of authentication mechanisms.
