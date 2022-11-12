@@ -24,3 +24,7 @@ show dbs
 ```
 exit
 ```
+Use admin database
+```
+use admin
+```
