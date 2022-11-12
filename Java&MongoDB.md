@@ -104,9 +104,16 @@ If we don't have test db, mongodb will create it.
 ```
 use test
 ```
-But if we don't add any data in test db.
-We can use show tables to see data in test db.
-We use show db, test db would not gonna show out.
-```
+- But if we don't add any data in test db.
+- We can use show tables to see data in test db.
+- We use show db, test db would not gonna show out.
+
 ![image](https://user-images.githubusercontent.com/79159894/201468468-64154df5-49b6-4af7-a1af-7a97fd7d74f9.png)
+
+- if we insert one document in test collection,
+- the test db will show
 ```
+test> db.test.insertOne({"name":"shoutzu han"})
+test> show dbs
+```
+![image](https://user-images.githubusercontent.com/79159894/201469047-8533f471-0dd3-4547-a503-be96ac55fcbb.png)
