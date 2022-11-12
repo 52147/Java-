@@ -39,6 +39,62 @@ root can only be used in the admin database and has all privileges.
 ```
 show users
 ```
+or
+```
+db.system.users.find()
+```
 ![image](https://user-images.githubusercontent.com/79159894/201467980-368bda22-51ce-449e-a31d-a1217471ac4c.png)
 - mechanisms: [ 'SCRAM-SHA-1', 'SCRAM-SHA-256' ]
 - means we use two type of authentication mechanisms.
+
+```
+admin> db.system.users.find()
+
+[
+  {
+    _id: 'admin.mongoloide',
+    userId: UUID("34c13f08-35ef-4e0e-8dcf-f866c5c7a3b3"),
+    user: 'mongoloide',
+    db: 'admin',
+    credentials: {
+      'SCRAM-SHA-1': {
+        iterationCount: 10000,
+        salt: '1Tf5UDwFx536ff6znryYPA==',
+        storedKey: '77FysqbVE45fFFjfSd+7tyQEFcM=',
+        serverKey: 'FpICDELOC/JcjRizCKvZC5pdbMk='
+      },
+      'SCRAM-SHA-256': {
+        iterationCount: 15000,
+        salt: 'aOCsfRFUjj7P64UNcbcOZK+YLAIjmK33iKpMFQ==',
+        storedKey: 'yD48H09x06Gj6q76PmxxCPiQlf0tUB6gqfQX58gWemM=',
+        serverKey: 'ZVTfyQTRHHautig0TRB6Hsfr6lZBlmfFs54R+UjbaBU='
+      }
+    },
+    roles: [ { role: 'root', db: 'admin' } ]
+  },
+  {
+    _id: 'admin.accountUser',
+    userId: UUID("5ec9ae5f-6b2f-4cc5-8a1a-daaed7e62275"),
+    user: 'accountUser',
+    db: 'admin',
+    credentials: {
+      'SCRAM-SHA-1': {
+        iterationCount: 10000,
+        salt: 'n1skEThWp+Oy/w5OZyzNGw==',
+        storedKey: 'cJ6Gl5sC8XR3bZ97uAu8a+j1jcQ=',
+        serverKey: '6/E7bX4SJEkbnvioVu3tF6l8Nvw='
+      },
+      'SCRAM-SHA-256': {
+        iterationCount: 15000,
+        salt: 'EmRiX9CURFszypiwAiaJZJFoEfN+GJVNHQkqMg==',
+        storedKey: 'C1TxZH7YpY2tcLttmad/lOpN1BGv9HBcxFfFMsuOSkE=',
+        serverKey: 'yp+s2F/zAzP9eno7J8JlfUlYlY2W35M+tgybhi7cRoM='
+      }
+    },
+    roles: [
+      { role: 'readWrite', db: 'admin' },
+      { role: 'dbAdmin', db: 'admin' }
+    ]
+  }
+]
+```
