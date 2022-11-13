@@ -147,7 +147,8 @@ db1> db.test2.find()
 ]
 ```
 ## 2. Query the data
-
+- https://cmql.org/playmongo/
+- https://stackoverflow.com/questions/70089317/how-to-do-a-word-count-in-mongodb
 ## 3. Get the output
 
 ## Challenge part
