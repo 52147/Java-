@@ -50,6 +50,7 @@ public class InsertJsonFileToMongoDB {
 ```
 
 ### Output
+### `Java console`
 ```
 11�� 13, 2022 12:35:24 �U�� com.mongodb.diagnostics.logging.JULLogger log
 INFO: Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
@@ -64,6 +65,7 @@ INFO: Opened connection [connectionId{localValue:2, serverValue:151}] to localho
 {"_id":{"$oid":"5e6e879a9cd239bf672f78a2"},"profile":{"game_id":2463,"fed_id":"9acf88be-5222-5eb4-aa29-f32b407139d4","created":{"$date":"2009-04-15T23:56:33.873Z"},"modified":{"$date":"2016-11-18T18:51:29.074Z"},"total_spent":{"$numberDecimal":"3495"},"total_playtime":{"$numberDecimal":"3775.4"},"size":271,"credential":"anonymous:a678c3636498fb337f85effd0d9eef3c19e8a651","current_client_id":"96348:27872:1.8.0ag:android:kitov.km","_client_id":25883,"last_session":{"$date":"2018-12-07T05:58:11.095Z"},"last_purchase":{"$date":"2004-12-24T21:23:25.891Z"},"total_refund":{"$numberDecimal":"5498.4"},"total_transactions":343,"xp":26461767,"level":52,"locale":{"country":"us","language":"en"}},"player":{"Key":"f45075d2e1b8a345aa846a2f55d7386c6132daf41a9ccc1033df38b323a735610a32e54a30fa7b96d5e12f831cc0ce0f046c62b8d3a15c9fbbcf463dc"}}
 readStartDocument can only be called when CurrentBSONType is DOCUMENT, not when CurrentBSONType is END_OF_DOCUMENT.
 ```
+### `Mongosh`
 ```
 db1> db.test2.find()
 [
