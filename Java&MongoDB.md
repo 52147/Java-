@@ -149,6 +149,40 @@ db1> db.test2.find()
 ## 2. Query the data
 - https://cmql.org/playmongo/
 - https://stackoverflow.com/questions/70089317/how-to-do-a-word-count-in-mongodb
+
+```
+		/**
+		 * Test the query
+		 */
+		MongoClient mk = new MongoClient("localhost", 27017);
+		MongoDatabase md = mk.getDatabase("db1");
+		MongoCollection<Document> collection = md.getCollection("test6");
+
+		// Query: find the match text
+		collection.createIndex(Indexes.text("title"));
+		// 1. find the text "fast"
+		Bson filter = Filters.text("fast");
+		// 2. print the doc that contain "fast"
+		collection.find(filter).forEach((Consumer<? super Document>) doc -> System.out.println(doc.toJson()));
+
+		// Query: find # of doc that title is "Fast 5"
+		// 1. use aggregate to group the value
+		collection.aggregate(
+				// 2. pass a list to perform aggregate stage
+				Arrays.asList(
+						// 3. find the "title" field is "Fast 5"
+						Aggregates.match(Filters.text("Fast 5")),
+//						Aggregates.match(Filters.eq("title", "Fast 5")),
+						// 4. group the matching doc by "_id" field
+						// accumulating doc for each distinct value "_id"
+						Aggregates.group("$_id", Accumulators.sum("count", 1))))
+				// 5. print the output
+				.forEach((Consumer<? super Document>) doc -> System.out.println(doc.toJson()));
+```
+
+
+
+
 ## 3. Get the output
 
 ## Challenge part
