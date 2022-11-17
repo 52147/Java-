@@ -160,6 +160,7 @@ Query: find the column that date beween 2012.01.02 to 2015.02.20
 - https://cmql.org/playmongo/
 - https://stackoverflow.com/questions/70089317/how-to-do-a-word-count-in-mongodb
 - https://www.mongodb.com/docs/drivers/java/sync/current/fundamentals/aggregation/#basic-aggregation-example
+- https://stackoverflow.com/questions/5608584/how-to-query-mongodb-with-like-using-the-java-api
 ## 3. Get the output
 
 
@@ -409,6 +410,7 @@ public class MongoDBProject {
 https://stackoverflow.com/a/27454146/19462556
 https://stackoverflow.com/a/4216767/19462556
 https://stackoverflow.com/questions/6840540/java-mongodb-query-by-date
+https://www.baeldung.com/java-string-to-date#string-date
 ## Error
 ### <eof> Error
 - I try to import the json file in mongoDB through Java, not working.
