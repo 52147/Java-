@@ -13,3 +13,5 @@
   - process of POM -> Dependency
   - use many plugin to build the different goal. goal: jar package, source code, war, xml 
 pom.xml -> POM -> Dependency -> local repository -> remote repository -> Internet -> central repository
+
+https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
