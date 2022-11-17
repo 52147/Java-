@@ -9,8 +9,7 @@
   - Maven is a tool for managing the project based on the concept of project object model(POM).
   - One project is like a object.
   - Dependency management:Our project can be a resource for other use, and we can also use resource from others projects. 
-
-- Pom.xml: contains the information of one project.
+  - Pom.xml: contains the information of one project.
 - Build Lifecycle : 
   - process of POM -> Dependency
   - use many plugin to build the different goal. goal: jar package, source code, war, xml 
