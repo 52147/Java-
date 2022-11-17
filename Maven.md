@@ -18,3 +18,11 @@
 
 https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
 https://www.bilibili.com/video/BV1Ah411S7ZE/?spm_id_from=333.337.search-card.all.click&vd_source=004e8f10a21c55becb57d8295b5ff681
+
+
+## Maven
+- mvn compile
+- mvn clean
+- mvn test
+- mvn package
+- mvn install
