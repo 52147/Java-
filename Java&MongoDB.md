@@ -380,6 +380,26 @@ public class MongoDBProject {
 
 }
 ```
+
+## Date format
+- when we insert each document in mongodb, we convert the string type to date type by using `SimpleDateFormat`.
+```java
+			while ((docs = br.readLine()) != null) {
+
+				Document var = Document.parse(docs);
+				// get the mdate document
+				String string = (String) var.get("mdate");
+				// Create a SimpleDateFormat formatter with the specific format
+				SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH);
+				// Use formatter to transfer the date
+				Date date = formatter.parse(string);
+
+				collection.insertOne(var.append("mdate_", date));
+
+				System.out.println(date.getClass());// use getClass() to test the data type
+			}
+```
+https://stackoverflow.com/a/27454146/19462556
 ## Error
 ### <eof> Error
 - I try to import the json file in mongoDB through Java, not working.
