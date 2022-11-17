@@ -147,12 +147,36 @@ db1> db.test2.find()
 ]
 ```
 ## 2. Query the data
+
+
+
 - https://cmql.org/playmongo/
 - https://stackoverflow.com/questions/70089317/how-to-do-a-word-count-in-mongodb
 - https://www.mongodb.com/docs/drivers/java/sync/current/fundamentals/aggregation/#basic-aggregation-example
 ## 3. Get the output
 
 ## Challenge part
-I try to import the json file in mongoDB through Java, not working.
-Got this error: 
-Exception in thread "main" org.bson.json.JsonParseException: JSON reader was expecting a name but found '<eof>'.
+### <eof> Error
+- I try to import the json file in mongoDB through Java, not working.
+- Got this error: 
+- Exception in thread "main" org.bson.json.JsonParseException: JSON reader was expecting a name but found '<eof>'.
+	
+	
+### Issue: Java variable type 
+- Problem:
+- 1. insert "mdate: yyyy-MM-DD" as string in mogodb
+- 2. can not use string to find the date range because this "mdate" Date type is not date type, is string type
+- Solve:
+- 1. insert "mdate: yyyy-MM-DD" as "date" data type in mongodb
+- 2. find the mdate(Date type) that is between xxxx and xxxx
+#### Notice:
+- 0. if we directly insert json file into mongodb
+- we will only get integer and string type data
+- so if we need the Date data type
+- we first need to convert the string date
+- 1. 
+- LocalDate is different to Date(include time zone)
+- Mongodb can only use Date type
+- 2.
+- If we want to insert the new document, first we need to drop the whole collection.
+- Otherwise, we will get the duplicate key error.	
