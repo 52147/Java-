@@ -14,7 +14,7 @@
   - process of POM -> Dependency
   - use many plugin to build the different goal. goal: jar package, source code, war, xml 
   - Process: pom.xml -> POM -> Dependency -> local repository -> remote repository -> Internet -> central repository
-- Unified the development environment: Create a unified and standard development environment.
+- Unified the development structure: Create a unified and standard project structure.
 
 https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html
 https://www.bilibili.com/video/BV1Ah411S7ZE/?spm_id_from=333.337.search-card.all.click&vd_source=004e8f10a21c55becb57d8295b5ff681
