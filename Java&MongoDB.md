@@ -147,8 +147,15 @@ db1> db.test2.find()
 ]
 ```
 ## 2. Query the data
-
-
+Query: find the column that date beween 2012.01.02 to 2015.02.20
+### Output
+```
+{ "_id" : 1 , "mdate" : "2012-02-20" , "title" : "2 Fast 2 Furious Fast" , "tags" : [ "undercover" , "drug dealer"] , "mdate_" : { "$date" : "2012-02-20T05:00:00.000Z"}}
+{ "_id" : 2 , "mdate" : "2012-02-20" , "title" : "Fast 5" , "tags" : [ "bank robbery" , "full team"] , "mdate_" : { "$date" : "2012-02-20T05:00:00.000Z"}}
+{ "_id" : 3 , "mdate" : "2012-02-20" , "title" : "Furious 7" , "tags" : [ "emotional"] , "mdate_" : { "$date" : "2012-02-20T05:00:00.000Z"}}
+{ "_id" : 4 , "mdate" : "2012-02-20" , "title" : "The Fate of the Furious" , "tags" : [ "betrayal"] , "mdate_" : { "$date" : "2012-02-20T05:00:00.000Z"}}
+{ "_id" : 5 , "mdate" : "2014-05-20" , "title" : "2 Fast 2 Furious Fast" , "tags" : [ "undercover" , "drug dealer"] , "mdate_" : { "$date" : "2014-05-20T05:00:00.000Z"}}
+```
 
 - https://cmql.org/playmongo/
 - https://stackoverflow.com/questions/70089317/how-to-do-a-word-count-in-mongodb
