@@ -40,14 +40,16 @@ https://www.bilibili.com/video/BV1Ah411S7ZE/?spm_id_from=333.337.search-card.all
 ## Seperate the main class
 - We create the main class as access point, and in this file we read the file form jar file and search the word.
 - We change the File to and BufferReader that read those file in the file path to use a BufferReader to read the input Stream
-
+```
 BufferedReader br = new BufferedReader(new InputStreamReader(Demo.class.getClassLoader().getResourceAsStream(fileName.toString())));
+```
 
 https://stackoverflow.com/questions/16953897/how-to-read-a-text-file-inside-a-jar
-
+```
 File f = new File(dir, fileName);
 BufferedReader br = new BufferedReader(new FileReader(f));
-
+```
+```
    <build>
         <plugins>
             <plugin>
@@ -80,3 +82,5 @@ BufferedReader br = new BufferedReader(new FileReader(f));
         </resources>
 
     </build>
+ ```   
+https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-runnable-jar-with-dependencies-using-maven
