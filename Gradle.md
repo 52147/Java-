@@ -21,3 +21,9 @@ jar {
     }
 }
 ```
+## See the file list in jar
+```
+ jar tf .\build\libs\Gradle_Project-1.0-SNAPSHOT.jar
+```
+We have successfully included the 622 file in the jar.
+![image](https://user-images.githubusercontent.com/79159894/202953373-6b3669b5-d4c5-40ac-a577-a02b884978b3.png)
