@@ -87,3 +87,10 @@ https://stackoverflow.com/questions/16953897/how-to-read-a-text-file-inside-a-ja
     </build>
  ```   
 https://stackoverflow.com/questions/574594/how-can-i-create-an-executable-runnable-jar-with-dependencies-using-maven
+## Check the files in jar
+ ```
+jar tf java-project-1.0-SNAPSHOT.jar
+ ```
+ 
+ ![image](https://user-images.githubusercontent.com/79159894/202936839-14755f7a-0f70-4c4b-9197-3be6edae0a5e.png)
+ - 622files include in jar
