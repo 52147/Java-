@@ -38,5 +38,5 @@ Jar works successfully.
 
 ## command line
 
-- use up key we can get the prviouse used command
-- use tab we can get the file name in the folder. If we want to enter this file, we can add / and keep use tab.
+- use `up` key we can get the prviouse used command
+- use `tab` we can get the file name in the folder. If we want to enter this file, we can add `/` and keep use tab.
