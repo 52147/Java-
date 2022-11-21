@@ -94,3 +94,12 @@ jar tf java-project-1.0-SNAPSHOT.jar
  
  ![image](https://user-images.githubusercontent.com/79159894/202936839-14755f7a-0f70-4c4b-9197-3be6edae0a5e.png)
  - 622files include in jar
+## Run the jar 
+ ```
+ java -jar .\java-project-1.0-SNAPSHOT.jar
+ ```
+ Program run successfully
+ 
+ 
+ 
+ 
