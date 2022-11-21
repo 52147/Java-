@@ -40,12 +40,12 @@ https://www.bilibili.com/video/BV1Ah411S7ZE/?spm_id_from=333.337.search-card.all
 ## Seperate the main class
 - We create the main class as access point, and in this file we read the file form jar file and search the word.
 - We change the File to and BufferReader that read those file in the file path to use a BufferReader to read the input Stream
-`Original`
+## `Original`
 ```java
 File f = new File(dir, fileName);
 BufferedReader br = new BufferedReader(new FileReader(f));
 ```
-`Changed`
+## `Changed`
 ```java
 BufferedReader br = new BufferedReader(new InputStreamReader(Demo.class.getClassLoader().getResourceAsStream(fileName.toString())));
 ```
@@ -101,6 +101,10 @@ jar tf java-project-1.0-SNAPSHOT.jar
  ```
  Program run successfully
  
- 
+ ## Summary
+ - 1. We need to read the file from jar file, so weed to add a plugin and resources to include file in jar file
+ - 2. In our program(src file), we need to have a code that can read the file from jar file.
+ - What is jar file?
+   - jar file is the package of the whole project, whichs include all files in our project(src code, cvs files), like the zip file. 
  
  
