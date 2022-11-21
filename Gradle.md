@@ -11,7 +11,7 @@
 
 The different part is we need to add the code in build.grade to includ the file in jar.
 
-```
+```java
 jar {
     manifest {
         attributes 'Main-Class': 'com.pra.Main'
