@@ -21,6 +21,7 @@ jar {
     }
 }
 ```
+https://discuss.gradle.org/t/how-do-i-specify-the-resources-folder-in-a-jar/16054/6
 ## See the file list in jar
 ```
  jar tf .\build\libs\Gradle_Project-1.0-SNAPSHOT.jar
