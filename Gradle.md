@@ -22,6 +22,7 @@ jar {
 }
 ```
 https://discuss.gradle.org/t/how-do-i-specify-the-resources-folder-in-a-jar/16054/6
+https://stackoverflow.com/questions/9689793/cant-execute-jar-file-no-main-manifest-attribute
 ## See the file list in jar
 ```
  jar tf .\build\libs\Gradle_Project-1.0-SNAPSHOT.jar
