@@ -10,3 +10,4 @@
   bottom: 15%;
 }
 ```
+https://stackoverflow.com/questions/64400365/how-to-add-text-on-image-in-reactjs
