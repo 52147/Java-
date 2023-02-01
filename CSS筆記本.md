@@ -14,7 +14,7 @@ https://stackoverflow.com/questions/64400365/how-to-add-text-on-image-in-reactjs
 
 ## 將box置中的方式
 flex: 用一個容器包住物件，然後可以控制內部物件的排版方式，所以所有內容物都是彈性物件(flex)。
-1. 利用 flex : 在父容器上套用flex，被父容器包住的物件box都可以彈性移動
+1. 利用 flex : 在父容器上套用flex，被父容器包住的物件(box)都可以彈性移動
 ```
 .parent {
   display: flex;
