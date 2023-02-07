@@ -17,7 +17,7 @@ npm i --save @fortawesome/react-fontawesome
 ```
 2. 導入 FontAwesomeIcon 和 圖標名 到 React     
 
-圖標名: 如果在官網中是<i class = "fas fa-atom"></i>，我們則需要導入faAtom這樣的圖標名到React。
+圖標名: 如果在官網中是`<i class = "fas fa-atom"></i>`，我們則需要導入faAtom這樣的圖標名到React。
 ```
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
