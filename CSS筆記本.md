@@ -12,7 +12,8 @@
 ```
 https://stackoverflow.com/questions/64400365/how-to-add-text-on-image-in-reactjs
 ## flex box
-flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終點)對齊來排版。
+flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終點)對齊來排版。   
+如果要在所有子元素上排版，需要在父元素上加上display: flex，預設將所有子元素並排，還可以針對單一子元素做彈性調整。        
 
 父元素須加上:  display: flex   
 子元素可以透過以操做做調整:   
@@ -20,8 +21,7 @@ flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終�
   - align-items   
   - flex-direction   
  
-如果要在所有子元素上排版，需要在父元素上加上display: flex，預設將所有子元素並排，還可以針對單一子元素做彈性調整。     
-flex box 和 display:inline-block 與display:block 不一樣的地方是，他們是直接寫在子元素上。   
+flex box 和 display:inline-block 與display:block 不一樣的地方是，display:inline-block 與display:block是直接寫在子元素上。   
 
 https://w3c.hexschool.com/flexbox/2186a786
 
