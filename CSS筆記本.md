@@ -16,12 +16,12 @@ flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終�
 
 父元素須加上:  display: flex   
 子元素可以透過以操做做調整:   
- justify-content   
- align-items   
- flex-direction   
+  - justify-content   
+  - align-items   
+  - flex-direction   
  
 如果要在所有子元素上排版，需要在父元素上加上display: flex，預設將所有子元素並排，還可以針對單一子元素做彈性調整。     
-和 display:inline-block 與display:block 不一樣的地方是，他們是直接寫在子元素上。   
+flex box 和 display:inline-block 與display:block 不一樣的地方是，他們是直接寫在子元素上。   
 
 https://w3c.hexschool.com/flexbox/2186a786
 
