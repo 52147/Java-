@@ -12,6 +12,8 @@
 ```
 https://stackoverflow.com/questions/64400365/how-to-add-text-on-image-in-reactjs
 ## flex box
+![image](https://user-images.githubusercontent.com/79159894/217377949-132ea2a8-1131-4ce6-b5a0-1aac5a328f26.png)
+
 flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終點)對齊來排版。   
 如果要在所有子元素上排版，需要在父元素上加上display: flex，預設將所有子元素並排，還可以針對單一子元素做彈性調整。        
 
@@ -48,6 +50,15 @@ align-items 屬性:
 - align-items: baseline 對其內容物的基線   
 
 https://w3c.hexschool.com/flexbox/87d66dc4
+
+### flex-direction
+當我們將父元素加入 display: flex 時，子元素會依照交錯軸橫向排列成一行，如果我們想將內容物程直項排列，可以透過flex-direction來設定。
+flex-direction 屬性:   
+- flex-direction: row 預設值，內容物依照主軸線橫向排列。
+- flex-direction: row-reverse，內容物依照主軸線橫向排列，但子元素起點從主軸向終點開始排列。
+- flex-direction: column，內容物依照交錯軸線直向排列
+- flex-direction: column-reverse，內容物依照交錯軸線直向排列，但子元素起點從交錯軸線向終點開始排列
+https://w3c.hexschool.com/flexbox/c1b62b9b
 ### 將box置中的方式
 flex: 用一個容器包住物件，然後可以控制內部物件的排版方式，所以所有內容物都是彈性物件(flex)。
 1. 利用 flex : 在父容器上套用flex，被父容器包住的物件(box)都可以彈性移動
