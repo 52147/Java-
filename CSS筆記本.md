@@ -28,7 +28,14 @@ https://w3c.hexschool.com/flexbox/2186a786
 
 
 ### justify-content 
+用主軸線作排版。   
+- justify-content: flex-start  預設值，對其主軸線最前端
+- justify-content: flex-end 對其主軸線最終端
+- justify-content: center 對其主軸線中央
+- justify-content: space-around 平均分配寬度和間距
+- justify-content: space-between 平均分配寬度，第一項和最後一項貼齊邊緣   
 
+https://w3c.hexschool.com/flexbox/4a029043
 ### 將box置中的方式
 flex: 用一個容器包住物件，然後可以控制內部物件的排版方式，所以所有內容物都是彈性物件(flex)。
 1. 利用 flex : 在父容器上套用flex，被父容器包住的物件(box)都可以彈性移動
