@@ -14,7 +14,7 @@ https://stackoverflow.com/questions/64400365/how-to-add-text-on-image-in-reactjs
 ## flex box
 ![image](https://user-images.githubusercontent.com/79159894/217377949-132ea2a8-1131-4ce6-b5a0-1aac5a328f26.png)
 
-flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終點)對齊來排版。   
+flex box: 利用主軸(主軸起點、終點)，交錯軸(交錯起點、交錯終點)對齊來排版。   
 如果要在所有子元素上排版，需要在父元素上加上display: flex，預設將所有子元素並排，還可以針對單一子元素做彈性調整。        
 
 父元素須加上:  display: flex   
@@ -41,7 +41,7 @@ justify-content 屬性:
 https://w3c.hexschool.com/flexbox/4a029043
 
 ### align-items
-用交錯軸(橫軸)來排版。   
+用交錯軸來排版。   
 align-items 屬性:   
 - align-items: flex-start 對齊交錯軸最前端
 - align-items: flex-end 對齊交錯軸最末端
