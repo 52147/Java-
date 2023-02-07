@@ -16,7 +16,8 @@ flex box: 利用主軸(主軸起點、終點)，橫軸(交錯起點、交錯終�
 如果要在所有子元素上排版，需要在父元素上加上display: flex，預設將所有子元素並排，還可以針對單一子元素做彈性調整。        
 
 父元素須加上:  display: flex   
-子元素可以透過以操做做調整:   
+
+子元素可以透過以下操做做調整:   
   - justify-content   
   - align-items   
   - flex-direction   
