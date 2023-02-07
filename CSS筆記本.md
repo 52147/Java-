@@ -52,8 +52,8 @@ align-items 屬性:
 https://w3c.hexschool.com/flexbox/87d66dc4
 
 ### flex-direction
-當我們將父元素加入 display: flex 時，子元素會依照交錯軸橫向排列成一行，如果我們想將內容物程直項排列，可以透過flex-direction來設定。
-flex-direction 屬性:   
+當我們將父元素加入 display: flex 時，子元素會依照交錯軸橫向排列成一行，如果我們想將內容物程直項排列，可以透過flex-direction來設定。   
+flex-direction 屬性:      
 - flex-direction: row 預設值，內容物依照主軸線橫向排列。
 - flex-direction: row-reverse，內容物依照主軸線橫向排列，但子元素起點從主軸向終點開始排列。
 - flex-direction: column，內容物依照交錯軸線直向排列
