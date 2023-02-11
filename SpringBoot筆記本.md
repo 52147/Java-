@@ -33,3 +33,5 @@ net start WwanSvc
 
 
 https://stackoverflow.com/a/66827598
+
+### 延伸討論: 解決window端口占用問題
