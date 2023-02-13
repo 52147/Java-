@@ -58,15 +58,18 @@ https://less.bootcss.com/
 ## Font Awesome
 Font Awesom 是 由css和less所組成，在html中加入圖標的工具套件，但在React 是使用 JSX 來寫html 物件，因JSX與一般的html 不相同，所以無法直解使用Font Awesome。    
 
-1. 下載 font awesome 依賴
+### 下載 font awesome 依賴
 ```
 npm i --save @fortawesome/fontawesome-svg-core
 npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/react-fontawesome
 ```
-2. 導入 FontAwesomeIcon 和 圖標名 到 React     
-
-圖標名: 如果在官網中是`<i class = "fas fa-atom"></i>`，我們則需要導入faAtom這樣的圖標名到React。
+### 導入 FontAwesomeIcon 和 圖標名 到 React     
+1. 先導入 FontAwesomeIcon
+2. 再導入不同類型圖標對應的包
+不同類型圖標對應的包: 
+如果是一般圖標，則需要導入@fortawesome/free-solid-svg-icons
+如果是商標，則需要導入@fortawesome/free-brands-svg-icons，ex: fb, ig, Linkedin。
 ```
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
