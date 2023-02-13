@@ -12,6 +12,7 @@ npx create-react-app 幫你做了以下工作:
 創建好React app後，cd 到你的 React app文件夾下，輸入 npm start，由create-react-appt創建的腳本會用默認瀏覽器，啟動react app在localhost:3000。
 
 ### 初始 React App 的文件結構
+```
 moz-todo-react
 ├── README.md
 ├── node_modules
@@ -30,7 +31,7 @@ moz-todo-react
     ├── index.js
     ├── logo.svg
     └── serviceWorker.js
-    
+```    
 src 是React 源碼存放地。   
 public中包含了瀏覽器會讀取的文件，其中最重要的是index.html。      
 package.json包含了npm為了建立該React app 的依賴的文件信息。      
