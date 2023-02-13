@@ -1,7 +1,39 @@
 # React 筆記本
+## 腳本文件(scripts)
+## 初始一個React App
+使用 npx create-react-app <文件夾名> 創建一個初始的React App，其中包含了開發react所需要的工具。
+npx create-react-app 幫你做了以下工作:
+1. 安裝了一些npm 包
+2. 加入啟動react app所需要的腳本文件
+3. 創建結構化的子文件夾，奠定app的基礎架構
+4. 如果電腦上安裝了git，順便幫你把git倉庫建好。
 
-## React 文件結構
 
+創建好React app後，cd 到你的 React app文件夾下，輸入 npm start，由create-react-appt創建的腳本會用默認瀏覽器，啟動react app在localhost:3000。
+
+### 初始 React App 的文件結構
+moz-todo-react
+├── README.md
+├── node_modules
+├── package.json
+├── package-lock.json
+├── .gitignore
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   └── manifest.json
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    └── serviceWorker.js
+    
+src 是React 源碼存放地。   
+public中包含了瀏覽器會讀取的文件，其中最重要的是index.html。      
+package.json包含了npm為了建立該React app 的依賴的文件信息。      
 ## CSS 預處理器
 https://juejin.cn/post/7005755782926958605
 ## less
