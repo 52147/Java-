@@ -5,11 +5,11 @@ https://www.cnblogs.com/yanxiaoge/p/10658154.html
 ## Java 變量類型: 類變量、實例變量、局部變量
 1. 類變量(靜態變量static): 
    - 方法之外的變量，用static修飾。
-   - 靜態變量除了被聲明為常量外，很少使用。ex: public static final DEPARTMENT = "數學系"; 。靜態變量被初始化後不可改變。
+   - 靜態變量除了被聲明為常量外，很少使用。ex: public static final String DEPARTMENT = "數學系"; 。靜態變量被初始化後不可改變。
    - 靜態變量儲存在靜態儲存區。
    - 在第一次訪問時被創建，在程序結束時銷毀。
    - 有默認值。數字默認為0，boolean默認為false，引用類型默認為null。
-   - 可以通過ClassName.VariableName的方式訪問。
+   - 可以通過ClassName.VariableName的方式訪問。ex: Employee.DEPARTMENT
    - 類變量被聲明為 public static final時，變量名稱一般使用大寫字母。
 3. 實例變量: 
    - 方法之外的變量，沒有用static修飾。
