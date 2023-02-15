@@ -26,7 +26,7 @@ https://www.cnblogs.com/yanxiaoge/p/10658154.html
 
 
 
-**延伸: 實例變量與遞歸函數**   
+[**延伸: 實例變量與遞歸函數**](https://app.gitbook.com/s/vPPL20vEg4Y6m1iVlw8f/tree-traversal/preorder-qian-xu-bian-li/144.-binary-tree-preorder-traversal)    
 https://www.runoob.com/java/java-variable-types.html     
 https://developer.aliyun.com/article/947126
 ## Java 有全域變量嗎
