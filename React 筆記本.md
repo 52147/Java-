@@ -1,7 +1,10 @@
 # React 筆記本
 ## 腳本文件(scripts)
+## ES6
+import 模塊時要記得加 {C }     
+https://www.runoob.com/w3cnote/es6-module.html
 ## JSX
-import 模塊時要記得加 {C }
+
 ## 初始一個React App
 使用 npx create-react-app <文件夾名> 創建一個初始的React App，其中包含了開發react所需要的工具。     
 npx create-react-app 幫你做了以下工作:
