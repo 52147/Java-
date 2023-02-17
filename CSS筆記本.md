@@ -19,6 +19,11 @@ Tailwind的class可以在官方文黨內找到。
 | py-4  | padding-top: 1rem; /* 16px */ <br> padding-bottom: 1rem; /* 16px */ |
 | 单元格  | 单元格 |   
 
+
+Background color:    
+Tailwind 中定義的背景色class色很少沒有的顏色需要自己使用styles定義。    
+
+https://tailwindcss.com/docs/background-color
 https://tailwindcss.com/docs/flex
 
 ## 把文字放到圖片上
