@@ -1,5 +1,5 @@
 # CSS筆記本
-## display 中的屬性 inline、block、inline-block
+## display 中的屬性: inline、block、inline-block
 每一個html 元素都有預設的display屬性。   
 
 display: inline   
