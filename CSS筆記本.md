@@ -5,7 +5,7 @@ Tailwind css是css 框架，他定義了 css class內的atribute，只需要直�
 Tailwind的class可以在官方文黨內找到。   
 |  Class  | Properties  |
 |  ----  | ----  |
-| py-4  | `padding-top: 1rem; /* 16px */ <br> padding-bottom: 1rem; /* 16px */` |
+| py-4  | padding-top: 1rem; /* 16px */ <br> padding-bottom: 1rem; /* 16px */ |
 | 单元格  | 单元格 |
 https://tailwindcss.com/docs/flex
 
