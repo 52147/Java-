@@ -1,6 +1,8 @@
 # CSS筆記本
 ## Boostrap
-網格系統: 透過利用 container 中的 flex來將子元素水平排列，width 來固定寬度，利用col 中的 min-width來設置media query，讓 col在網頁不的不同的寬度下做斷點。   
+網格系統:    
+
+透過利用 container 中的 flex來將子元素水平排列，width 來固定寬度，利用col 中的 min-width來設置media query，讓 col在網頁不的不同的寬度下做斷點。   
 一行一共有12個col，可以分配不同的的col長度給不同的col。   
    
 https://bootstrap5.hexschool.com/docs/5.0/layout/grid/   
