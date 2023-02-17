@@ -8,4 +8,4 @@ NavLink 是一種特殊的<Link> ， 他可以知道是否是active的狀態，�
 https://reactrouter.com/en/main/components/nav-link   
   
 ### Bootstrap 
-  
+Navbar.Brand 幫Navigation Bar 最左邊的品牌加Style。
