@@ -2,10 +2,13 @@
 ## display 中的屬性 inline、block、inline-block
 每一個html 元素都有預設的display屬性。
 display: inline   
+
  - 元素的寬度由內容決定，不能調整width、 height、margin、padding
 display: block   
+
  - 不管內容的的寬度，元素的寬度佔頁面的一整行，可以調整margin、padding
-display: inline-block   
+display: inline-block    
+
  - 保持內容元素的寬度，可以調整margin、padding
     
 https://www.bigboycancode.com/posts/css-display-block-vs-inline/
