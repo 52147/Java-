@@ -1,9 +1,36 @@
 # CSS筆記本
+
+## Html 元素邊界: padding、margin、border
+padding: 調整元素內所有元素與元素自身的邊界距離，屬於元素內部的邊界調整。
+margin: 調整元素與元素之間的間距，屬於元素外部的邊界調整。
+border: 
+  - 調整元素最外層的邊界，用於元素的外框設定。
+  - 常用設定:
+    - border-width: 調整邊框粗細
+    - border-style: 調整邊框樣式，ex: solid、dashed
+    - border-color: 設定邊框顏色
+
+padding 、margin都有top right bottom left，四個屬性，用來調整色個邊的間距。
+border 的top right bottom left用來設定四個邊的樣式。 不寫這四個邊的話就是，所有邊框的粗細 邊框顏色 邊框樣式。 border: 所有邊框的粗細 邊框顏色 邊框樣式
+
+如果只寫padding 或 margin，寫四個數字就表示 上 又 下 左，兩個數字表示 上下 左右，寫三個數字表示 上 左右 下，寫一個數字表示 四個邊同樣的值。
+
+box-sizing: 
+ - 用來調整區塊內部的間距與邊框的計算方式，與padding 與border的設定有關，常見的狀況是元素內的內容設定了border以及 padding，導致內部元素的外框超出外部元素的外框。
+ - 屬性:
+   - content-box: 代表設定的寬度僅為內容的寬度，padding 和 border的寬度設定仍會加上，所以內容物的外框仍然會超出外部的外框。
+   - border-box: 代表設定的寬度包含內容的寬度與padding 和 border的寬度，所以內容物的外框不會超出外部的外框。
+ 
+      
+https://ithelp.ithome.com.tw/articles/10205322
 ## Boostrap
 網格系統:    
 
-透過利用 container 中的 flex來將子元素水平排列，width 來固定寬度，利用col 中的 min-width來設置media query，讓 col在網頁不的不同的寬度下做斷點。   
+
+透過利用 container 中的 flex來將子元素水平排列，width 來固定寬度，利用col 中的 min-width來設置media query，讓 col在網頁不的不同的寬度下做斷點。     
+
 一行一共有12個col，可以分配不同的的col長度給不同的col。   
+
    
 https://bootstrap5.hexschool.com/docs/5.0/layout/grid/   
 https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox   
