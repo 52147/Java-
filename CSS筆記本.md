@@ -19,7 +19,7 @@ flex box: 利用主軸(主軸起點、終點)，交錯軸(交錯起點、交錯�
 
 父元素須加上:  display: flex   
 
-子元素可以透過以下操做做調整:   
+父元素可以透過以下操做對子元素做調整:   
   - justify-content   
   - align-items   
   - flex-direction   
