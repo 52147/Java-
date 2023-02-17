@@ -1,5 +1,14 @@
 # CSS筆記本
-
+## display 中的屬性 inline、block、inline-block
+每一個html 元素都有預設的display屬性。
+display: inline
+ - 元素的寬度由內容決定，不能調整width、 height、margin、padding
+display: block
+ - 不管內容的的寬度，元素的寬度佔頁面的一整行，可以調整margin、padding
+display: inline-block
+ - 保持內容元素的寬度，可以調整margin、padding
+    
+https://www.bigboycancode.com/posts/css-display-block-vs-inline/
 ## Html 元素邊界: padding、margin、border
 padding: 調整元素內所有元素與元素自身的邊界距離，屬於元素內部的邊界調整。   
 margin: 調整元素與元素之間的間距，屬於元素外部的邊界調整。   
