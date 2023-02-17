@@ -22,8 +22,11 @@ Tailwind的class可以在官方文黨內找到。
 
 Background color:    
 Tailwind 中定義的背景色class色很少沒有的顏色需要自己使用styles定義。    
-[安裝tailwind](https://tailwindcss.com/docs/guides/create-react-app)
-https://tailwindcss.com/docs/background-color
+
+[安裝tailwind](https://tailwindcss.com/docs/guides/create-react-app)   
+
+https://tailwindcss.com/docs/background-color   
+
 https://tailwindcss.com/docs/flex
 
 ## 把文字放到圖片上
