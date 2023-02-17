@@ -1,4 +1,13 @@
 # CSS筆記本
+## Boostrap
+網格系統: 透過利用 container 中的 flex來將子元素水平排列，width 來固定寬度，利用col 中的 min-width來設置media query，讓 col在網頁不的不同的寬度下做斷點。   
+一行一共有12個col，可以分配不同的的col長度給不同的col。   
+   
+https://bootstrap5.hexschool.com/docs/5.0/layout/grid/   
+https://developer.mozilla.org/zh-CN/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox   
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background
+
+
 
 ## Tailwind css
 Tailwind css是css 框架，他定義了 css class內的atribute，只需要直接在html element 中加入 class就可以使用，這樣可以不用自己寫class內容然後放到css file。   
@@ -6,7 +15,8 @@ Tailwind的class可以在官方文黨內找到。
 |  Class  | Properties  |
 |  ----  | ----  |
 | py-4  | padding-top: 1rem; /* 16px */ <br> padding-bottom: 1rem; /* 16px */ |
-| 单元格  | 单元格 |
+| 单元格  | 单元格 |   
+
 https://tailwindcss.com/docs/flex
 
 ## 把文字放到圖片上
