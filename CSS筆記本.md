@@ -105,3 +105,14 @@ flex: 用一個容器包住物件，然後可以控制內部物件的排版方�
 ## overflow
 
 ## position
+position 是用來設定物件定位時所需要的參考對象，如果對物件添加了不同的position後，就能改變物件篹參考的對象，進而改變物件的位置。   
+可以透過添加top，left，right、bottom 屬性來 移動不同 box的位置。    
+或是添加 z-index來設定不同box的前後位置，讓box上下疊層。    
+
+position 共有5種屬性:     
+1. static
+2. relative 相對定位: 將設定的物件，讓其參考空間跟隨資料流位置。
+3. fixed 固定定位: 將設定的物件，讓其參考空間設定為視窗。當物件設定了fixed之後，將會自己獨立一層，不會與其他物件有任何關聯。fixed 和absolute 不一樣的地方是，fixed因為參考的定位空間是視窗，所以不管如何捲動視窗，fixed物件都不會換位置，但如果定位為absolute，則會被捲走，所以常見的固定在瀏覽器上方的nav bar 都是使用 fixed 定位的。
+4. absolute 絕對定位: 將設定的物件，讓其參考空間跟隨離自身最近且具備定位設定的父層元素，如果沒有父層元素具備定位設定，該物件將採用視窗空間作為參考位置。當物件設定了absolute之後，將會自己獨立一層，不會與其他物件有任何關聯。
+5. sticky
+https://ithelp.ithome.com.tw/articles/10253500
