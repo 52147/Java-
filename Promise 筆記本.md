@@ -7,7 +7,7 @@
 Promise 是將生產者代碼 與 消費者代碼 連接在一起的 js對象。   
 
 
-Promis對象的構造器(constructor):
+## Promis對象的構造器(constructor)
 ```
 let promise = new Promise(function(resolve, reject){
    // executor 生產者代碼
@@ -19,7 +19,7 @@ let promise = new Promise(function(resolve, reject){
    - resolve(value): 如果任務成功，調用reolve 回調函數，並帶有結果value。
    - reject(error): 如果出現了error，調用reject 回調函數，error即為error對象。
 
-Promis對象具有以下內部屬性:    
+## Promis對象具有以下內部屬性
  - state: 
    - 最初是pending，然後在resolve 被 調用時，變為fulfilled，在reject被調用時變為 rejected。
    - executor最終將promise移至這兩種狀態之一。
