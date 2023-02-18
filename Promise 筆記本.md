@@ -8,10 +8,11 @@ Promise 是將生產者代碼 與 消費者代碼 連接在一起的 js對象。
 
 
 Promis對象的構造器(constructor):
+```
 let promise = new Promise(function(resolve, reject){
    // executor 生產者代碼
 });
-
+```
 傳遞給 Promis對象 的函數為 executor。 當Promis對象 被創建，executor會自動執行。    
 參數resolve 與reject是由js提供的回調。 我們需要完成的代碼僅在executor內部。    
 當executor獲得了結果，應該調用以下回調:   
