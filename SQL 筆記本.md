@@ -12,7 +12,7 @@
 - Windows 使用兩個字符的 CR LF 序列
 - Unix 只使用 LF 而
 - 舊的 MacOS（pre-OSX MacIntosh）使用 CR
-解決方式:
-將sql query貼到Notepad++後再貼到phpmyadmin就可以解決。
-參考資料:
-https://stackoverflow.com/questions/1552749/difference-between-cr-lf-lf-and-cr-line-break-types
+解決方式:   
+將sql query貼到Notepad++後再貼到phpmyadmin就可以解決。   
+參考資料:   
+https://stackoverflow.com/questions/1552749/difference-between-cr-lf-lf-and-cr-line-break-types   
