@@ -4,6 +4,7 @@
 
 ## 問題 1
 直接複製從網頁複製貼上sql query 到 phpmyadmin，出現 Error in processing request。   
+![螢幕擷取畫面_20230220_015721](https://user-images.githubusercontent.com/79159894/220482236-1063cc15-941c-4144-9970-6f2fe9e15319.png)
 
 原因:   
 因為window和 Linux上的換行字符new line character不一樣導致。
