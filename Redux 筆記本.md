@@ -23,4 +23,5 @@ Action 請求層 -> Dispatcher 傳輸層 -> Store 處理層 -> View 視圖層
 - JQuery: 資料與畫面分離
 - Vue 和 Angular: 資料與畫面雙向綁定
 - React: 只需要管理資料，藉由狀態渲染出畫面
-https://juejin.cn/post/6844903806644256782
+https://juejin.cn/post/6844903806644256782    
+https://hackmd.io/@Heidi-Liu/redux    
