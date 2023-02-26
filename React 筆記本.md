@@ -101,3 +101,16 @@ https://ithelp.ithome.com.tw/articles/10231200?sc=rss.qu
 ## 在 React 中使用 Axios
 
 https://www.freecodecamp.org/chinese/news/how-to-use-axios-with-react/
+
+
+## SyntheticEvent
+React事件處理event handler將被傳遞給SyntheticEvent，SyntheticEvent是瀏覽器原生事件Native Events的包裝器，他與瀏覽器原生事件有相同的接口。   
+SyntheticEvent 具有跨瀏覽器和可重複性的功能。      
+
+https://ithelp.ithome.com.tw/articles/10194857
+## event.target.value
+event.target 為觸發事件的元素   
+event.target.value 為該元素的值(在input filed中輸入的值).   
+
+
+https://stackoverflow.com/questions/67014481/what-is-event-target-value-in-react-exactly
