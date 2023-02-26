@@ -42,3 +42,9 @@ https://stackoverflow.com/a/66827598
 org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set   
 
 解決：把 application properties 中的password 改成自己的 sql password。    
+
+https://stackoverflow.com/questions/26548505/org-hibernate-hibernateexception-access-to-dialectresolutioninfo-cannot-be-null    
+
+## Homebrew
+用homebrew 安裝舊版sql
+https://bbs.huaweicloud.com/blogs/351111
