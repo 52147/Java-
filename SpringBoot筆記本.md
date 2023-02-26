@@ -39,5 +39,6 @@ https://stackoverflow.com/a/66827598
 
 ## hibernate
 
-org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set
-解決：把 application properties 中的password 改成自己的 sql password。
+org.hibernate.HibernateException: Access to DialectResolutionInfo cannot be null when 'hibernate.dialect' not set   
+
+解決：把 application properties 中的password 改成自己的 sql password。    
