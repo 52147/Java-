@@ -1,5 +1,7 @@
 # Github 指令
-
+## git index
+git index 是一個暫存區，他在本地資料夾系統與 commit 歷史之間。    
+當運行git add 時，在工作目錄中的文件，將被hashed 為一個object，儲存在index中。    
 ## origin
 origin 代表遠程倉庫
 
