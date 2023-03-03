@@ -48,5 +48,36 @@ let promise = new Promise(function(resolve, reject){
 ![image](https://user-images.githubusercontent.com/79159894/222852864-edc436a6-d53a-475d-8378-b10d22798b2e.png)
 ### 改變狀態為fulfilled
 
+## 用.then/.catch/.finally 來訪問 state 和 result
+用消費者函數.then/.catch/.finally 來返回結果給消費者。
+
+### then
+promise.then(
+   function(result){ // 成功狀態reolve()執行完後執行}
+   function(error){ // 錯誤狀態reject()的執行完後執行}
+)
+## resolve 狀態
+let promise = new Promise(function(resolve, rejct){
+   setTimeout(() => resolve("done"),1000);
+});
+promise.then(
+   result => alert(result), // resolve() 運行此函數
+   error => alert(error)
+)
+## reject 狀態
+let promise = new Promise(function(resolve, reject){
+   setTimeout(() => reject(new Error("Whoops")), 1000);
+});
+
+promise.then(
+   result => alert(result), // reject 運行此函數
+   errot => alert(error)
+);
+
+也可以在.then() 中只提供一個函數
+let promise = new Promise(function(resolve, reject){
+    setTimeout(() => resolve("done"),1000);
+});
+promise.then(alert); // resolve 後執行 
 https://axios-http.com/zh/docs/intro    
 https://zh.javascript.info/promise-basics
