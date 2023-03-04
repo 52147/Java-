@@ -1,12 +1,24 @@
 # Promise 筆記本
 
+
+
 生產者代碼(producing code): executor，做了一些工作，需要一段時間，才能產出結果。ex: 通過網路加載數據的代碼。   
 
 消費者代碼(consuming code): 想要在生產者代碼完成工作的第一時間就能獲得其工作成果。    
 
 Promise 是將生產者代碼 與 消費者代碼 連接在一起的 js對象。   
 
+## 回調函數
+js 主機環境提供了許多函數，這些函數允許我們執行異步行為(action)，代表我們現在開執行這個函數，他會在稍後完成。ex: setTimeout(), 加載腳   本loadScript(src)或模塊
 
+### loadScript(src)
+loadScript(src) 該函數給src 加載腳本，此函數將帶有給定src，動態創建標籤 <script src = ""> 插入到文黨中。
+
+function loadScript(src){
+   let script = document.createElement("script");
+   script.src = src;
+   documetn.head.append(script);
+}
 ## Promis對象的構造器(constructor)
 ```
 let promise = new Promise(function(resolve, reject){
