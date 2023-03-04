@@ -9,7 +9,7 @@
 Promise 是將生產者代碼 與 消費者代碼 連接在一起的 js對象。   
 
 ## 回調函數
-js 主機環境提供了許多函數，這些函數允許我們執行異步行為(action)，代表我們現在開執行這個函數，他會在稍後完成。ex: setTimeout(), 加載腳   本loadScript(src)或模塊
+js 主機環境提供了許多函數，這些函數允許我們執行異步行為(action)，代表我們現在開執行這個函數，他會在稍後完成，完成後根據他的狀態執行結果。ex: setTimeout(), 加載腳本loadScript(src)或模塊
 
 ### loadScript(src)
 loadScript(src) 該函數給src 加載腳本，此函數將帶有給定src，動態創建標籤 <script src = ""> 插入到文黨中。瀏覽器將自動加載它，並在加載完成後執行它。
