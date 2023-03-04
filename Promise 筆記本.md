@@ -14,7 +14,7 @@ js 主機環境提供了許多函數，這些函數允許我們執行異步行�
 
 ### loadScript(src)
 loadScript(src) 該函數給src 加載腳本，此函數將帶有給定src，動態創建標籤 <script src = ""> 插入到文黨中。瀏覽器將自動加載它，並在加載完成後執行它。
-```
+```javascript
 function loadScript(src){
    let script = document.createElement("script");
    script.src = src;
@@ -24,7 +24,7 @@ function loadScript(src){
 loadScript("/my/script.js");
 ```
 我們可以添加一個回調函數作為loadScript的第2個參數，該函數在腳本加載完後執行
-```
+```javascript
 function loadScript(src, callback){
    let script = document.createElement("script");
    script.src = src;
@@ -35,7 +35,7 @@ function loadScript(src, callback){
 loadScript("/my/script.js");
 ```   
 ## Promis對象的構造器(constructor)
-```
+```javascript
 let promise = new Promise(function(resolve, reject){
    // executor 生產者代碼
 });
@@ -61,7 +61,7 @@ let promise = new Promise(function(resolve, reject){
 ### 改變狀態為fulfilled
 例子：
 Promise 構造器中有 setTimeOut() 作為生產者代碼
-```
+```javascript
 let promise = new Promise(function(resolve, reject){
    // 當promise 構建完成時，自動執行setTimeout()
    
@@ -80,14 +80,14 @@ let promise = new Promise(function(resolve, reject){
 用消費者函數.then/.catch/.finally 來返回結果給消費者。
 
 ### then
-```
+```javascript
 promise.then(
    function(result){ // 成功狀態reolve()執行完後執行}
    function(error){ // 錯誤狀態reject()的執行完後執行}
 )
 ```   
 ## resolve 狀態
-```   
+```javascript  
 let promise = new Promise(function(resolve, rejct){
    setTimeout(() => resolve("done"),1000);
 });
@@ -97,7 +97,7 @@ promise.then(
 )
 ```   
 ## reject 狀態
-```   
+```javascript   
 let promise = new Promise(function(resolve, reject){
    setTimeout(() => reject(new Error("Whoops")), 1000);
 });
@@ -108,7 +108,7 @@ promise.then(
 );
 ```
 也可以在.then() 中只提供一個函數
-```
+```javascript
 let promise = new Promise(function(resolve, reject){
     setTimeout(() => resolve("done"),1000);
 });
@@ -122,14 +122,14 @@ https://zh.javascript.info/promise-basics/
 async/await 是以一種更容易理解的方式使用promise。
 ## async function
 在函數前面加關鍵字async，表示這個函數返回一個reolved promise。
-```   
+```javascript
 async function f(){
    return 1;
 }
 f().then(alert); // 1
 ```   
 等於：
-```
+```javascript
 async function f(){
    return Promise.resolve(1);   
 }
@@ -137,11 +137,10 @@ f().then(alert); // 1
 ```
 ## await
 await 只在async函數中運作。     
-關鍵字 await 讓js 引擎等待promise完成並返回結果。   
-await 可以暫停函數的執行，直到promise狀態變為settled，然後可以利用promise執行後的結果繼續做處理。這個行為不會耗費任何CPU，因為js引擎可以同時處理其他任務，ex:執行其他腳本，處理事件。   
+await 讓js 引擎等待，直到promise狀態變為settled，然後可以利用promise執行完成後得到的結果繼續做處理。這個行為不會耗費任何CPU，因為js引擎可以同時處理其他任務，ex:執行其他腳本，處理事件。   
 他是比promise.then() 更簡單易讀的寫法來獲取promise結果。   
 ex: 1 s 後reolved 的 promise。   
-```
+```javascript
 async function f() {
 
  let promise = new Promise((resolve, reject) => {
