@@ -12,14 +12,27 @@ Promise 是將生產者代碼 與 消費者代碼 連接在一起的 js對象。
 js 主機環境提供了許多函數，這些函數允許我們執行異步行為(action)，代表我們現在開執行這個函數，他會在稍後完成。ex: setTimeout(), 加載腳   本loadScript(src)或模塊
 
 ### loadScript(src)
-loadScript(src) 該函數給src 加載腳本，此函數將帶有給定src，動態創建標籤 <script src = ""> 插入到文黨中。
+loadScript(src) 該函數給src 加載腳本，此函數將帶有給定src，動態創建標籤 <script src = ""> 插入到文黨中。瀏覽器將自動加載它，並在加載完成後執行它。
 ```
 function loadScript(src){
    let script = document.createElement("script");
    script.src = src;
    documetn.head.append(script);
 }
+// 使用 loadScript() 加載在此路徑的腳本
+loadScript("/my/script.js");
 ```
+我們可以添加一個回調函數作為loadScript的第2個參數，該函數在腳本加載完後執行
+```
+function loadScript(src, callback){
+   let script = document.createElement("script");
+   script.src = src;
+   script.onload = () => callback(script); // onload 事件，會在腳本加載和執行完後執行一個函數
+   documetn.head.append(script);
+}
+// 使用 loadScript() 加載在此路徑的腳本
+loadScript("/my/script.js");
+```   
 ## Promis對象的構造器(constructor)
 ```
 let promise = new Promise(function(resolve, reject){
