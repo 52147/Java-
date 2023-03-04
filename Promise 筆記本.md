@@ -98,7 +98,8 @@ promise.then(
 let promise = new Promise(function(resolve, reject){
     setTimeout(() => resolve("done"),1000);
 });
-```   
+
 promise.then(alert); // resolve 後執行 
+```      
 https://axios-http.com/zh/docs/intro    
 https://zh.javascript.info/promise-basics
