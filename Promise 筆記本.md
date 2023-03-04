@@ -115,4 +115,42 @@ let promise = new Promise(function(resolve, reject){
 promise.then(alert); // resolve 後執行 
 ```      
 https://axios-http.com/zh/docs/intro    
-https://zh.javascript.info/promise-basics
+https://zh.javascript.info/promise-basics/
+
+## async/await
+async/await 是以一種更容易理解的方式使用promise。
+## async function
+在函數前面加關鍵字async，表示這個函數返回一個reolved promise。
+```   
+async function f(){
+   return 1;
+}
+f().then(alert); // 1
+```   
+等於：
+```
+async function f(){
+   return Promise.resolve(1);   
+}
+f().then(alert); // 1
+```
+## await
+await 只在async函數中運作
+關鍵字 await 讓js 引擎等待promise完成並返回結果。
+await 暫停函數的執行，直到promise狀態變為settled，然後再利用promise執行後的結果繼續執行。這個行為不會耗費任何CPU，因為js引擎可以同時處理其他任務，ex:執行其他腳本，處理事件。
+他是比promise.then() 更簡單易讀的寫法來獲取promise結果。
+ex: 1 s 後reolved 的 promise。
+```
+async function f() {
+
+ let promise = new Promise((resolve, reject) => {
+ setTimeout(() => resolve("done!"), 1000)
+});
+
+let result = await promise; //等待直到promise resolve
+alert(result); // "done!"
+}
+
+f();
+```
+   
