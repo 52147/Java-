@@ -136,11 +136,11 @@ async function f(){
 f().then(alert); // 1
 ```
 ## await
-await 只在async函數中運作
-關鍵字 await 讓js 引擎等待promise完成並返回結果。
-await 暫停函數的執行，直到promise狀態變為settled，然後再利用promise執行後的結果繼續執行。這個行為不會耗費任何CPU，因為js引擎可以同時處理其他任務，ex:執行其他腳本，處理事件。
-他是比promise.then() 更簡單易讀的寫法來獲取promise結果。
-ex: 1 s 後reolved 的 promise。
+await 只在async函數中運作。     
+關鍵字 await 讓js 引擎等待promise完成並返回結果。   
+await 可以暫停函數的執行，直到promise狀態變為settled，然後可以利用promise執行後的結果繼續做處理。這個行為不會耗費任何CPU，因為js引擎可以同時處理其他任務，ex:執行其他腳本，處理事件。   
+他是比promise.then() 更簡單易讀的寫法來獲取promise結果。   
+ex: 1 s 後reolved 的 promise。   
 ```
 async function f() {
 
