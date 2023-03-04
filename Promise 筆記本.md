@@ -13,12 +13,13 @@ js 主機環境提供了許多函數，這些函數允許我們執行異步行�
 
 ### loadScript(src)
 loadScript(src) 該函數給src 加載腳本，此函數將帶有給定src，動態創建標籤 <script src = ""> 插入到文黨中。
-
+```
 function loadScript(src){
    let script = document.createElement("script");
    script.src = src;
    documetn.head.append(script);
 }
+```
 ## Promis對象的構造器(constructor)
 ```
 let promise = new Promise(function(resolve, reject){
@@ -46,13 +47,14 @@ let promise = new Promise(function(resolve, reject){
 ### 改變狀態為fulfilled
 例子：
 Promise 構造器中有 setTimeOut() 作為生產者代碼
-
+```
 let promise = new Promise(function(resolve, reject){
    // 當promise 構建完成時，自動執行setTimeout()
    
    // 1s後執行resolve()回調函數，並帶有結果 “done”
    setTimeout(() => resolve("done"), 1000);
 });
+```
 1. executor 被自動立即調用
 2. excutor 接受2個參數，resolve 和 reject，這2個回調函數由js引擎預先定義好，因此我們不需要創建他們，只需要在excutor執行完成後調用他們。
 3. 經過1s之後，excutor 調用 reolve("done")，這將改變promise對象的狀態從初始奘態pending改為 fulfilled，結果從原本undefined改為done。
@@ -64,11 +66,14 @@ let promise = new Promise(function(resolve, reject){
 用消費者函數.then/.catch/.finally 來返回結果給消費者。
 
 ### then
+```
 promise.then(
    function(result){ // 成功狀態reolve()執行完後執行}
    function(error){ // 錯誤狀態reject()的執行完後執行}
 )
+```   
 ## resolve 狀態
+```   
 let promise = new Promise(function(resolve, rejct){
    setTimeout(() => resolve("done"),1000);
 });
@@ -76,7 +81,9 @@ promise.then(
    result => alert(result), // resolve() 運行此函數
    error => alert(error)
 )
+```   
 ## reject 狀態
+```   
 let promise = new Promise(function(resolve, reject){
    setTimeout(() => reject(new Error("Whoops")), 1000);
 });
@@ -85,11 +92,13 @@ promise.then(
    result => alert(result), // reject 運行此函數
    errot => alert(error)
 );
-
+```
 也可以在.then() 中只提供一個函數
+```
 let promise = new Promise(function(resolve, reject){
     setTimeout(() => resolve("done"),1000);
 });
+```   
 promise.then(alert); // resolve 後執行 
 https://axios-http.com/zh/docs/intro    
 https://zh.javascript.info/promise-basics
