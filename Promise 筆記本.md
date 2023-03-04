@@ -154,3 +154,4 @@ alert(result); // "done!"
 f();
 ```
    
+## Promise vs 回調函式
