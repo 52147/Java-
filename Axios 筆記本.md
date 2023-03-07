@@ -122,3 +122,33 @@ const {data} = await axios.post("/user", document.querySelector("#my-form"), {
    }
 })
 ```
+### Form
+Multipart: multipart/form-data
+```javascript
+const {data} = await axios.post("http://httpbin.org/post", {
+   firstName: "Fred",
+   lastName: "Flintstone",
+   order: [1, 2, 3],
+   photo: document.querySelectore("#fileInput").files
+  },{
+   headers:{
+      "Content-Type" : "multiplart/form-data"
+   }
+  
+  })
+```
+
+URL enocoded form: application/x-www-form-urlencoded
+```javascript
+const {data} = await axios.post("http://httpbin.org/post", {
+   firstName: "Fred",
+   lastName: "Flintstone",
+   order: [1, 2, 3],
+   photo: document.querySelectore("#fileInput").files
+  },{
+   headers:{
+      "Content-Type" : "application/x-www-form-urlencoded"
+   }
+  
+  })
+```
