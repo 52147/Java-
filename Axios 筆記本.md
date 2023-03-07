@@ -71,9 +71,13 @@ async function getUser(){
   
 ## 發送一個POST請求
 http header包含 Content-Type，代表資料發送的格式。     
-"Content-Type" : "application/json" 代表資料格式為json    
-'Content-Type': "multipart/form-data" html 的 form，加上ectype屬性，代表可以把複數個資料格式一起傳送，用boundary將不同資料屬性分割開來 ex: name=karen&age=25   
-"Content-Type" : "application/x-www-form-urlencoded" html 的 form，沒有設置ectype屬性下，會以application/x-www-form-urlencoded 的方式提交數據，也就是在url上加上key1 = val1   
+ - "Content-Type" : "application/json" 代表資料格式為json    
+ - 'Content-Type': "multipart/form-data" html 的 form，加上ectype屬性，代表可以把複數個資料格式一起傳送，用boundary將不同資料屬性分割開來 ex: name=karen&age=25   
+ - "Content-Type" : "application/x-www-form-urlencoded" html 的 form，沒有設置ectype屬性下，會以application/x-www-form-urlencoded 的方式提交數據，也就是在url上加上key1 = val1   
+
+
+https://github.com/52147/Java-Interview-Questions/blob/main/%E5%BE%8C%E7%AB%AF%E9%9D%A2%E8%A9%A6%E5%95%8F%E9%A1%8C.md#3-%E7%99%BC%E9%80%81http%E8%AB%8B%E6%B1%82
+
 
 ## 發送一個POST請求 
 
