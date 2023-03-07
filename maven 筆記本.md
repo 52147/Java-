@@ -1,11 +1,12 @@
 # maven 筆記本
 
-Maven 是為Java項目的管理和構建工具，主要功能有：
+Maven 是Java項目的管理和構建工具，主要功能有：
 1. 標準化的項目結構
 2. 標準化的構建流程（編譯、測試、打包、發布）
 3. 標準化依賴管理機制
 
 ## maven 項目結構
+```
 a-maven-project
 ├── pom.xml
 ├── src
@@ -16,6 +17,7 @@ a-maven-project
 │       ├── java
 │       └── resources
 └── target
+```
 - pom.xml 項目依賴文件
 - src/main/java 存放java源碼
 - src/main/resources 存放資源文件（sql）
