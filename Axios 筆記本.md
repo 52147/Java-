@@ -1,7 +1,10 @@
 # Axios 筆記本
 
 ## Axios
-Axios 是基於promise 的http 請求庫，類似於ajax，應用於瀏覽器（客戶端）和node.js（服務端）。在瀏覽器（客戶端）使用XmlHttpRequests，在服務端使用node.js的http module。
+Axios 是基於promise 的http 請求庫，類似於ajax，用於向後台發起請求。   
+
+應用於瀏覽器（客戶端）和node.js（服務端）。在瀏覽器（客戶端）使用XmlHttpRequests，在服務端使用node.js的http module。   
+
 特性：
    - 從瀏覽器創建XMLHttpRequests
    - 從node.js 創建http請求
