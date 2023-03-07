@@ -69,3 +69,52 @@ async function getUser(){
 }
 ```
   
+## 發送一個POST請求
+http header包含 Content-Type，代表資料發送的格式。     
+"Content-Type" : "application/json" 代表資料格式為json    
+'Content-Type': "multipart/form-data" html 的 form，加上ectype屬性，代表可以把複數個資料格式一起傳送，用boundary將不同資料屬性分割開來 ex: name=karen&age=25   
+"Content-Type" : "application/x-www-form-urlencoded" html 的 form，沒有設置ectype屬性下，會以application/x-www-form-urlencoded 的方式提交數據，也就是在url上加上key1 = val1   
+
+## 發送一個POST請求 
+
+### JSON
+1. 發送一個POST請求來創建新的user
+```javascript
+axios.post( "/user", {
+   firstName: "Fred",
+   lastName: "Flintstone"
+   })
+   .then(function(response){
+   console.log(response);
+   }).catch(function(error){
+   console.log(error);
+   });
+```
+2. 發送多個併發POST請求
+```javascript
+function getUserAccount(){
+   return axios.get("/user/12345");
+}
+
+function getUserPermissions(){
+   return axios.get("/user/12345/permissions");
+}
+
+const [acct, perm] = await Promise.add([getUserAccount(), getUserPermissions()]);
+
+```
+另一種寫法：
+```
+Promise.all([getUserAccount(), getUserPermission()])
+   .then(function([acct, perm])){
+      // ...
+   }
+```
+以json 的格式Post 一個 html form :
+```javascript
+const {data} = await axios.post("/user", document.querySelector("#my-form"), {
+   headers: {
+      "Content-Type" : "application/json"
+   }
+})
+```
