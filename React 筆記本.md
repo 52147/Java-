@@ -128,5 +128,41 @@ https://stackoverflow.com/questions/67014481/what-is-event-target-value-in-react
  - 3. 改變DOM
  - 4. 輸出日誌
 
+利用GET，從url中獲取資料，並利用useEffect()將資料返回到頁面：
+
+```javascript
+import React, {useState, useEffect} from "react";
+import axios from "axios";
+
+export const FetchData = () => {
+    const[data, setData] = useState([]);
+    
+    useEffect(() => {
+        const fetch = async () => {
+            const res = await axios.get("https://hn.algolia.com/api/v1/search?query=redux");
+            
+            setData(res.data.hits); // 不能直接setData為res，因為res是一個object
+            console.log(res); // res是一個object
+            console.log(res.data); // res 中的 data 是一個object
+            console.log(res.data.hits); // res 中的 data 中的 hits是 array
+        
+        };
+        fetch();
+    
+    },[]);
+    
+    return (
+        <ul>
+            {data.map((item) =>(
+                <li key = {item.objectID}>
+                    <a href = {item.url}>{item.title}</a>
+                </li>
+            ))}
+        </ul>    
+    );
+}
+```
+
+https://codesandbox.io/s/sleepy-mcclintock-l5is7z?file=/src/index.js.   
 
 https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html
