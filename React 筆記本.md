@@ -114,3 +114,19 @@ event.target.value 為該元素的值(在input filed中輸入的值).
 
 
 https://stackoverflow.com/questions/67014481/what-is-event-target-value-in-react-exactly
+
+
+## useEffect
+
+當網頁改變時（副效應），網頁隨之改變(組建加載)。   
+1. 第一個參數： 一個函數，要改變的負效應      
+2. 第二個參數：指定負效應函數的（第一個參數）的依賴項，只有依賴項改變，才會重新渲染頁面。如果沒有寫第二個參數，副效應只會在組件加載的時候，執行（重整頁面）。    
+
+用途：
+ - 1. 獲取數據
+ - 2. 是件監聽或訂閱
+ - 3. 改變DOM
+ - 4. 輸出日誌
+
+
+https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html
