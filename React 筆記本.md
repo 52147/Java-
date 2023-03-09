@@ -141,7 +141,7 @@ export const FetchData = () => {
         const fetch = async () => {
             const res = await axios.get("https://hn.algolia.com/api/v1/search?query=redux");
             
-            setData(res.data.hits); // 不能直接setData為res，因為res是一個object
+            setData(res.data.hits); // 不能直接setData為res，因為res是一個object，map只能處理array(我們想利用array，將資料放在html list裡)
             console.log(res); // res是一個object
             console.log(res.data); // res 中的 data 是一個object
             console.log(res.data.hits); // res 中的 data 中的 hits是 array
@@ -162,6 +162,7 @@ export const FetchData = () => {
     );
 }
 ```
+https://github.com/52147/Java-Interview-Questions/blob/main/js%20%E7%AD%86%E8%A8%98%E6%9C%AC.md#map     
 
 https://codesandbox.io/s/sleepy-mcclintock-l5is7z?file=/src/index.js.   
 
