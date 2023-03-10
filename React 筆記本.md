@@ -170,4 +170,10 @@ https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html
 
 ## Props
 props 是將數據從父組件傳遞到子組建的方法。    
-props 只能讀不能修改，代表子組件不能修改props，通常是另一個組件用useState更新state，然後父組件再傳遞state為props到子組件，傳到需要使用的子組件中，子組件使用props來更新內部或觸發操作。
+props 只能讀不能修改，代表子組件不能修改props，通常是另一個組件用useState更新state，然後父組件再傳遞state為props到子組件，傳到需要使用的子組件中，子組件使用props來更新內部或觸發操作。     
+ex: 頁面更新依賴於上一個頁面的操作：    
+上一個頁面點擊 申請intern -> 將 intern作為props傳到子組件 -> 子組件更新為intern的內容     
+上一個頁面點擊 申請full-time -> 將 full-time作為props傳到子組件 -> 子組件更新為full-time的內容    
+    
+結論： 這樣只需同一個頁面，然後利用props來更新頁面為相對應的內容。    
+
