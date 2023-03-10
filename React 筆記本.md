@@ -167,3 +167,7 @@ https://github.com/52147/Java-Interview-Questions/blob/main/js%20%E7%AD%86%E8%A8
 https://codesandbox.io/s/sleepy-mcclintock-l5is7z?file=/src/index.js.   
 
 https://www.ruanyifeng.com/blog/2020/09/react-hooks-useeffect-tutorial.html
+
+## Props
+props 是將數據從父組件傳遞到子組建的方法。    
+props 只能讀不能修改，代表子組件不能修改props，通常用父組件用useState更新state然後，傳遞state為props到子組件，子組件使用props來更新內部或觸發操作。
