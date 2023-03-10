@@ -176,5 +176,6 @@ ex: 頁面更新依賴於上一個頁面的操作：
 上一個頁面點擊 申請intern -> 將 intern作為props傳到子組件 -> 子組件更新為intern的內容     
 上一個頁面點擊 申請full-time -> 將 full-time作為props傳到子組件 -> 子組件更新為full-time的內容    
     
-結論： 這樣只需同一個頁面，然後利用props來更新頁面為相對應的內容。    
-
+結論： 這樣只需同一個頁面，然後利用props來更新頁面為相對應的內容。        
+    
+https://github.com/52147/Diamond-Tofu-Career/blob/main/src/App.js   
