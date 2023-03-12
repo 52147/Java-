@@ -186,5 +186,7 @@ https://github.com/52147/Diamond-Tofu-Career/blob/main/src/App.js
 4. 用useEffect，當每次進入頁面時，設定paginationClickHandler 為１。
 
 
+https://github.com/52147/CS673-Project-Fronted/blob/dev/src/parking-garage-automation/authority-management/Autho.jsx    
+
 
 
