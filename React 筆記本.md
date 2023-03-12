@@ -179,3 +179,12 @@ ex: 頁面更新依賴於上一個頁面的操作：
 結論： 這樣只需同一個頁面，然後利用props來更新頁面為相對應的內容。        
     
 https://github.com/52147/Diamond-Tofu-Career/blob/main/src/App.js   
+
+## React Boostrap Pagination
+1. 一個paginationClickHandler，讓使用者點擊Pagination 圖標時將資料更新到post，一次推１０比資料之後，post當作props傳到Post.jsx，以table的樣子呈現，再將pagination 對應該頁碼的圖標設定為active。
+3. item[] 用來更新pagination 數字圖標，資料數量／１０，增加一個數字圖標，頁碼如果等於paginationClickHandler所展示的頁面，就將頁碼設定為active。
+4. 用useEffect，當每次進入頁面時，設定paginationClickHandler 為１。
+
+
+
+
