@@ -189,12 +189,12 @@ https://github.com/52147/Diamond-Tofu-Career/blob/main/src/App.js
 https://github.com/52147/CS673-Project-Fronted/blob/dev/src/parking-garage-automation/authority-management/Autho.jsx    
 
 ## 將資料導出為Excel黨
-1. 導入xlsx工具導入到react
+1. 導入xlsx工具到react
 2. 製作一個新的array，包含想要的column + data
-3. 製作一個work book object
-4. 將資料加到workbook
-5. 將workbook 加到 worksheet
-6. 將workbook寫入excel file
+3. 製作一個workbook object
+4. 將資料加到 worksheet
+5. 將 worksheet 加到 workbook 
+6. 將 workbook寫入excel file
 ```javascript
 import { utils, writeFile } from 'xlsx';
 
