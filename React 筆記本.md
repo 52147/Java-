@@ -189,3 +189,29 @@ https://github.com/52147/Diamond-Tofu-Career/blob/main/src/App.js
 https://github.com/52147/CS673-Project-Fronted/blob/dev/src/parking-garage-automation/authority-management/Autho.jsx    
 
 ## 將資料導出為Excel黨
+1. 導入xlsx工具導入到react
+2. 製作一個新的array，包含想要的column + data
+3. 製作一個work book object
+4. 將資料加到workbook
+5. 將workbook 加到 worksheet
+6. 將workbook寫入excel file
+```javascript
+import { utils, writeFile } from 'xlsx';
+
+  const handleExportXLS = () =>{
+    let rowData = [['id', 'username', 'password', 'role']]; // 設置column名
+    history.forEach(data => { // 製造一個新的array，加上資料和column
+      rowData.push([
+        data.id,
+        data.username,
+        data.password,
+        data.role
+      ])
+    });
+    const wb = utils.book_new(); // 製造一個excel work book(excel file)(workbook裡可以有很多worksheet，work sheet 為 excel file裡面的一個表)
+    const ws = utils.aoa_to_sheet(rowData); // 用aoa_to_sheet 轉換 rowData 裡的資料成excel worksheet object
+    utils.book_append_sheet(wb, ws, 'Sheet1');  // 使用 book_append_sheet 將work sheet 加到work book
+    writeFile(wb, 'data.xlsx'); // 使用writeFile 將work book(excel file裡面的一個表)寫入 excel file
+  }
+```
+https://docs.sheetjs.com/docs/demos/frontend/react
