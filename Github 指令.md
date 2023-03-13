@@ -24,7 +24,9 @@ https://stackoverflow.com/questions/22335987/what-happens-when-i-git-pull-rebase
 ```
 Git: cannot checkout branch - error: pathspec '...' did not match any file(s) known to git
 ```
-原因：本地repo沒有更新到remote repo的資料
-解決：
+原因：本地repo沒有更新到remote repo的資料.   
+
+解決：   
 1. 先 git fetch 將remote repo資料，更新到本地repo
 2. 再 git checkout branch_name
+https://stackoverflow.com/questions/13072111/gits-local-repository-and-remote-repository-confusing-concepts
