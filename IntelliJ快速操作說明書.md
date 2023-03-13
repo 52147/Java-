@@ -1,2 +1,4 @@
 # IntelliJ IDEA 快速操作說明書
-Ctrl+Alt+L : 排版   
+## 排版 
+window: Ctrl + Alt + L 
+mac: cmd + Alt + L
