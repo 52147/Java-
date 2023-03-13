@@ -208,7 +208,7 @@ import { utils, writeFile } from 'xlsx';
         data.role
       ])
     });
-    const wb = utils.book_new(); // 製造一個excel work book(excel file)(workbook裡可以有很多worksheet，work sheet 為 excel file裡面的一個表)
+    const wb = utils.book_new(); // 製造一個excel work book(workbook裡可以有很多worksheet，work sheet 為 excel file裡面的一個表)
     const ws = utils.aoa_to_sheet(rowData); // 用aoa_to_sheet 轉換 rowData 裡的資料成excel worksheet object
     utils.book_append_sheet(wb, ws, 'Sheet1');  // 使用 book_append_sheet 將work sheet 加到work book
     writeFile(wb, 'data.xlsx'); // 使用writeFile 將work book 寫入 excel file
