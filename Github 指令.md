@@ -17,3 +17,14 @@ git fetch origin dev
 git rebase origin/dev
 ```
 https://stackoverflow.com/questions/22335987/what-happens-when-i-git-pull-rebase-origin-development-from-within-a-feature
+
+## checkout
+### checkout到新創立的分支後遇到錯誤
+
+```
+Git: cannot checkout branch - error: pathspec '...' did not match any file(s) known to git
+```
+原因：本地repo沒有更新到remote repo的資料
+解決：
+1. 先 git fetch 將remote repo資料，更新到本地repo
+2. 再 git checkout branch_name
