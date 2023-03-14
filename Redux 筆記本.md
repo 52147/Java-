@@ -1,5 +1,28 @@
 # Redux 筆記本
-Redux 是js 的一種狀態管理工作，他是一種前端的架構模式，他能套用任何程式語言，在框架中也很常見，ex:Wepay、Flutter。   
+- Redux 是js 的一種狀態state管理工具，他是一種前端的架構模式和library，他能套用任何程式語言，在框架中也很常見，ex:Wepay、Flutter。   
+- Redux 使用稱為動作action 的事件還管理和更新state。他集中儲存state，來確保state是以可預測的方式更新，可預測代表我們可以知道應用程序的狀態何時、為何、如何更新，以及更新時的應用程序的邏輯將如何運行，有助於確保應用程序按預期工作。
+Redux適合使用在以下情況：
+- 應用程序有大量的狀態
+- 狀態會頻繁的更新
+- 更新狀態的邏輯非常複雜
+- 應用程序有中型或大型的codebase，並且由許多人共同開發
+
+Redux工具：    
+Redux是一個js庫，他通常與以下幾個包一起使用：      
+1.react-redux
+Redux可以與任何UI 框架一起使用，React是最常使用的框架。      
+使用react-redux的官方包，可以讓react組件通過讀取state與調度action來更新redux store。   
+```
+npm install react-redux
+```
+2.reduxjs/toolkit
+redux toolkit 是redux 官方推薦的寫redux 邏輯的方法。它包含構建redux的包和函數。
+```
+npm install @reduxjs/toolkit
+```
+3. Redux DevTools Extensions
+Redux DevTools Extensions可以顯示redux store中狀態改變的歷史紀錄。
+
 ## Redux vs Flux
 ### Flux
 Flux 是 fb用於構建客戶端網頁的架構，是一種應用程序中的數據流設計模式，Redux 是基於Flux的核心思想實現的一套解決方案。   
@@ -27,3 +50,4 @@ Action 請求層 -> Dispatcher 傳輸層 -> Store 處理層 -> View 視圖層
 
 https://juejin.cn/post/6844903806644256782        
 https://hackmd.io/@Heidi-Liu/redux    
+
