@@ -7,7 +7,7 @@ Redux適合使用在以下情況：
 - 更新狀態的邏輯非常複雜
 - 應用程序有中型或大型的codebase，並且由許多人共同開發
 
-Redux工具：    
+## Redux工具：    
 Redux是一個js庫，他通常與以下幾個包一起使用：      
 1.react-redux
 Redux可以與任何UI 框架一起使用，React是最常使用的框架。      
