@@ -1,5 +1,20 @@
 # SpringBoot筆記本
 
+## Upload file
+如果後端需要接收前端的 multipart/form-data request，後端需要在function 加上 @RequestParam("file") MultipartFile file。    
+
+以下spring boot function接收前端傳來的post request帶有excel黨：    
+```java
+    @PostMapping("/import")
+    public Boolean imp(@RequestParam("file") MultipartFile file) throws Exception {
+        InputStream inputStream = file.getInputStream();
+        ExcelReader reader = ExcelUtil.getReader(inputStream);
+        List<User> list = reader.readAll(User.class);
+        userService.saveBatch(list);
+        return true;
+    }
+```
+https://stackoverflow.com/questions/47493549/spring-file-upload-with-requestparam
 ## Issue
 ### 用tomcat server run intellj web
 出現localhost:1099 already in use   
