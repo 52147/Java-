@@ -4,6 +4,7 @@
 如果後端需要接收前端的 multipart/form-data request，後端需要在function 加上 @RequestParam("file") MultipartFile file。    
 
 以下spring boot function接收前端傳來的post request帶有excel黨：    
+讀取檔案中的資料後，加到db。
 ```java
     @PostMapping("/import")
     public Boolean imp(@RequestParam("file") MultipartFile file) throws Exception {
