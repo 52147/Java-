@@ -46,7 +46,7 @@ index.js 為app的入口點(entry point)，為渲染App的地方，包含渲染�
 
 App.js 為 為react app中的根組件root component，為所有component中最頂層的組件。     
 
-inde.js 定義了整個app的global style。      
+App.css 定義了整個app的global style。      
 
 package.json包含了npm為了建立該React app 的依賴的文件信息。      
 
