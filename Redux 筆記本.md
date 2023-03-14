@@ -11,7 +11,7 @@ Redux適合使用在以下情況：
 Redux是一個js庫，他通常與以下幾個包一起使用：      
 1. react-redux     
 Redux可以與任何UI 框架一起使用，React是最常使用的框架。      
-使用react-redux的官方包，可以讓react組件通過讀取state與調度action來更新redux store。   
+使用react-redux的官方包，可以讓react組件通過讀取state與分派action來更新redux store。   
 ```
 npm install react-redux
 ```
@@ -23,6 +23,17 @@ npm install @reduxjs/toolkit
 3. Redux DevTools Extensions        
 Redux DevTools Extensions可以顯示redux store中狀態改變的歷史紀錄。
 
+### reduxjs/toolkit
+redux toolkit包含以下幾種APIs:
+1. configureStore():
+   - 包裝 createStore 以提供簡化的配置與默認值。
+   - 可以自動組合slice reducer，並添加 redux中間件，包含默認的 redux-thunk。
+2. createSlice():
+   - 接受一個reducer函數對象，一個slice名稱與一個初始state 值，並且可以為action creator 和action types自動生成對應的reducer 和state。
+3. createAsyncThunk():
+   - 接受一個表示action type的string，和一個返回promise的函數，並且基於返回的promise狀態，生成一個thunk分派action type(pending/ fulifilled/ rejected)。
+
+https://redux-toolkit.js.org/introduction/getting-started#whats-included
 ## Redux vs Flux
 ### Flux
 Flux 是 fb用於構建客戶端網頁的架構，是一種應用程序中的數據流設計模式，Redux 是基於Flux的核心思想實現的一套解決方案。   
