@@ -38,17 +38,17 @@ moz-todo-react
     ├── logo.svg
     └── serviceWorker.js
 ```    
-src 是React 源碼存放地。   
+- src 是React 源碼存放地。   
 
-public中包含了瀏覽器會讀取的文件，其中最重要的是index.html。      
+- public中包含了瀏覽器會讀取的文件，其中最重要的是index.html。      
 
-index.js 為app的入口點(entry point)，為渲染App的地方，包含渲染位置(Dom 元素)與想要渲染內容，為使用根組件App component的地方。      
+- index.js 為app的入口點(entry point)，為渲染App的地方，包含渲染位置(Dom 元素)與想要渲染內容，為使用根組件App component的地方。      
 
-App.js 為 為react app中的根組件root component，為所有component中最頂層的組件。     
+- App.js 為 為react app中的根組件root component，為所有component中最頂層的組件。     
 
-App.css 定義了整個app的global style。      
+- App.css 定義了整個app的global style。      
 
-package.json包含了npm為了建立該React app 的依賴的文件信息。      
+- package.json包含了npm為了建立該React app 的依賴的文件信息。      
 
 [React app 中 index.js 與 app.js 間的關係](https://stackoverflow.com/questions/50493069/why-does-create-react-app-creates-both-app-js-and-index-js)   
 
