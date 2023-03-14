@@ -9,18 +9,18 @@ Redux適合使用在以下情況：
 
 ## Redux工具：    
 Redux是一個js庫，他通常與以下幾個包一起使用：      
-1.react-redux
+1. react-redux     
 Redux可以與任何UI 框架一起使用，React是最常使用的框架。      
 使用react-redux的官方包，可以讓react組件通過讀取state與調度action來更新redux store。   
 ```
 npm install react-redux
 ```
-2.reduxjs/toolkit
+2. reduxjs/toolkit     
 redux toolkit 是redux 官方推薦的寫redux 邏輯的方法。它包含構建redux的包和函數。
 ```
 npm install @reduxjs/toolkit
 ```
-3. Redux DevTools Extensions
+3. Redux DevTools Extensions        
 Redux DevTools Extensions可以顯示redux store中狀態改變的歷史紀錄。
 
 ## Redux vs Flux
