@@ -86,9 +86,9 @@ export function Counter() {
 }
 ```
 ## Redux 概念
-
-1. state： 驅動應用程序的來源
-2. 視圖：基於當前state的聲明性描述UI
+event 發生時（使用者點擊按鈕），state被更新，UI 重新根據新的state渲染呈現。
+1. state： 驅動應用程序的來源，描述了應用程序在特定時間點的狀況。
+2. 視圖UI：基於當前state的聲明性描述render UI。
 3. action: 使用者輸入所觸發的事件，會觸發state的更新。
 
 問題：   
@@ -101,6 +101,12 @@ export function Counter() {
    
 Redux的概念就是，用一個單一的位置，來包含全局狀態，以及在更新狀態時，遵循特定的規則，使代碼變得可以預測。     
 https://react-redux.js.org/introduction/getting-started#api-overview    
+
+
+
+## Redux Data Flow
+
+
 
 ## Redux vs Flux
 ### Flux
