@@ -85,6 +85,9 @@ export function Counter() {
   )
 }
 ```
+
+https://react-redux.js.org/introduction/getting-started#api-overview
+
 ## Redux vs Flux
 ### Flux
 Flux 是 fb用於構建客戶端網頁的架構，是一種應用程序中的數據流設計模式，Redux 是基於Flux的核心思想實現的一套解決方案。   
