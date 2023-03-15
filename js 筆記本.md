@@ -35,9 +35,9 @@ https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
 ### filter
 
-filter()：
 - 為數組中的每個元素調用回調函數，並利用所有使回調函數返回true的元素創建一個新的數組。
-- filter 不會改變原數組
+- filter 不會改變原數組    
+    
 箭頭函數： 
 ```javascript
 filter((element) => {})
