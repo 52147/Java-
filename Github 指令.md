@@ -1,4 +1,8 @@
 # Github 指令
+
+![image](https://user-images.githubusercontent.com/79159894/225411335-309efd76-1b16-4f1f-b2a9-63b80a602e3a.png)
+
+https://stackoverflow.com/questions/2745076/what-are-the-differences-between-git-commit-and-git-push
 ## git index
 git index 是一個暫存區，他在本地資料夾系統與 commit 歷史之間。    
 當運行git add 時，在工作目錄中的文件，將被hashed 為一個object，儲存在index中。    
