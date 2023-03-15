@@ -96,15 +96,19 @@ pick f7fde4a Change the commit message but push the same commit.
 ```
 Better README // 舊 commit message
 
-// 一些英文說明
+# 一些英文說明
+# 一些英文說明
+# 一些英文說明
 ```
 把原本的commit message 刪除，按i後，輸入新的commit message，按esc退出修改，輸入:wq然後按enter保存，跳回原本的terminal。
 ```
 update README // 新 commit message
 
-// 一些英文說明
+# 一些英文說明
+# 一些英文說明
+# 一些英文說明
 ```
-接著重新推入道遠段的repo
+接著重新推入到遠端的repo
 ```
 git push --force
 ```
