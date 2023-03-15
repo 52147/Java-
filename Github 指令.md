@@ -34,14 +34,17 @@ https://stackoverflow.com/questions/13072111/gits-local-repository-and-remote-re
 
 ## 修改已push 到github的 commit message
 修改最近三則訊息
-git rebase -i HEAD^^^ 
+```
+git rebase -i HEAD^^^
+```
 或
+```
 git rebase -i HEAD~n // 把n改成3
-
+```
 接著出現以以下3則最近的commit 紀錄：
 
 
-```
+```bash
 pick e499d89 Delete CNAME
 pick 0c39034 Better README
 pick f7fde4a Change the commit message but push the same commit.
@@ -64,12 +67,13 @@ pick f7fde4a Change the commit message but push the same commit.
 #
 # Note that empty commits are commented out
 ```
-如果我要修改0c39034 這條commit message，把他前面的pick改成reword。
-步驟：
+如果我要修改0c39034 這條commit message，把他前面的pick改成reword。   
+   
+步驟：   
  1. 按i 鍵修改
  2. 修改完後按esc鍵退出修改模式
  3. 接著輸入:wq然後按enter代表保存
-```
+```bash
 pick e499d89 Delete CNAME
 reword 0c39034 Better README
 pick f7fde4a Change the commit message but push the same commit.
@@ -93,7 +97,7 @@ pick f7fde4a Change the commit message but push the same commit.
 # Note that empty commits are commented out
 ```
 接著跳到 修改commit message的頁面：
-```
+```bash
 Better README // 舊 commit message
 
 # 一些英文說明
@@ -101,7 +105,7 @@ Better README // 舊 commit message
 # 一些英文說明
 ```
 把原本的commit message 刪除，按i後，輸入新的commit message，按esc退出修改，輸入:wq然後按enter保存，跳回原本的terminal。
-```
+```bash
 update README // 新 commit message
 
 # 一些英文說明
