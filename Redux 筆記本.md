@@ -23,7 +23,7 @@ npm install @reduxjs/toolkit
 3. Redux DevTools Extensions        
 Redux DevTools Extensions可以顯示redux store中狀態改變的歷史紀錄。
 
-### reduxjs/toolkit
+### redux toolkit
 redux toolkit包含以下幾種APIs:
 1. configureStore():
    - 包裝 createStore 以提供簡化的配置與默認值。
@@ -34,6 +34,57 @@ redux toolkit包含以下幾種APIs:
    - 接受一個表示action type的string，和一個返回promise的函數，並且基於返回的promise狀態，生成一個thunk分派action type(pending/ fulifilled/ rejected)。
 
 https://redux-toolkit.js.org/introduction/getting-started#whats-included
+### react redux
+react redux 包含了以下幾種APIs:
+1. Provider
+   - Provider組件可以使redux store在所有app中的組件中被使用。
+2. Hooks
+   - react rudux提供了useSelector()和 useDispatch() 來讓 react 組件與redux store做互動。
+   - useSelector()：
+     -  從store讀取state的值，並且用訂閱來更新。
+   - useDispatch():
+     - 返回store的分派方法，讓我們分派action。  
+
+```javascript
+import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import {
+  decrement,
+  increment,
+  incrementByAmount,
+  incrementAsync,
+  selectCount,
+} from './counterSlice'
+import styles from './Counter.module.css'
+
+export function Counter() {
+  const count = useSelector(selectCount)
+  const dispatch = useDispatch()
+
+  return (
+    <div>
+      <div className={styles.row}>
+        <button
+          className={styles.button}
+          aria-label="Increment value"
+          onClick={() => dispatch(increment())}
+        >
+          +
+        </button>
+        <span className={styles.value}>{count}</span>
+        <button
+          className={styles.button}
+          aria-label="Decrement value"
+          onClick={() => dispatch(decrement())}
+        >
+          -
+        </button>
+      </div>
+      {/* omit additional rendering output here */}
+    </div>
+  )
+}
+```
 ## Redux vs Flux
 ### Flux
 Flux 是 fb用於構建客戶端網頁的架構，是一種應用程序中的數據流設計模式，Redux 是基於Flux的核心思想實現的一套解決方案。   
