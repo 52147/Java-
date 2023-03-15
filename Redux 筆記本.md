@@ -85,8 +85,22 @@ export function Counter() {
   )
 }
 ```
+## Redux 概念
 
-https://react-redux.js.org/introduction/getting-started#api-overview
+1. state： 驅動應用程序的來源
+2. 視圖：基於當前state的聲明性描述UI
+3. action: 使用者輸入所觸發的事件，會觸發state的更新。
+
+問題：   
+如果是單一數據流的程序ex: 點擊按鈕，觸發事件，視圖根據狀態更新。如果是多個組件需要共享同一個state時，有時可以透過將狀態放到父組件來進行，但不是所有狀況都可以這樣進行操作。   
+   
+解決方式：    
+從組件間提取共享狀態，並將其放在組件樹外的位置，這樣我們的組件樹就成為一個大的視圖，任何組件都可以訪問狀態和觸發動作，無論組件在組件樹中的哪個位置。    
+   
+通過保持狀態和視圖間的獨立性，為代碼提供了結構性和可維護性。   
+   
+Redux的概念就是，用一個單一的位置，來包含全局狀態，以及在更新狀態時，遵循特定的規則，使代碼變得可以預測。     
+https://react-redux.js.org/introduction/getting-started#api-overview    
 
 ## Redux vs Flux
 ### Flux
