@@ -32,3 +32,35 @@ map((element, index, array) => {})
 
 
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+
+### filter
+
+filter()：
+- 為數組中的每個元素調用回調函數，並利用所有使回調函數返回true的元素創建一個新的數組。
+- filter 不會改變原數組
+箭頭函數： 
+```javascript
+filter((element) => {})
+filter((element, index) => {})
+filter((element, index, array) => {})
+```
+回調函數：
+  - 用來測試數組中每個元素的函數。
+  - 返回true代表該元素通過測試，保留該元素，返回false則不保留。
+  - 回調函數接受以下３個參數：
+    - 1. element: 數組中當前在處理的元素
+    - 2. index: 數組中當前在處理的元素的索引
+    - 3. array: 調用filter的數組，被遍歷的數組
+
+利用filter在數組中搜尋包含特定字串的元素：
+```javascript
+const fruits = ["apple", "banana", "grapes", "mango", "orange"];
+
+function filterItems(arr, query){
+  return arr.filter((el)) => el.toLowerCase().inclues(query.toLowerCase());
+}
+
+console.log(filterItems(fruits, "ap")); // output: ["apple", "grapes"]
+console.log(filterItems(fruits, "an")); // output: ["banana", "mango", "orange"]
+```
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/filter#%E8%BF%87%E6%BB%A4_json_%E4%B8%AD%E7%9A%84%E6%97%A0%E6%95%88%E6%9D%A1%E7%9B%AE
