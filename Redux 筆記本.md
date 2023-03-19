@@ -108,7 +108,7 @@ https://react-redux.js.org/introduction/getting-started#api-overview
 ## Redux Data Flow
 Redux 使用一種單向數據流的結構：
 1. UI dispatch 一個action
-2. store 運行reducer，並state根據action做變化。
+2. store 運行reducer，讓state根據action做變化。
 3. store通知UI狀態已改變
 4. UI根據新狀態重新渲染
    
