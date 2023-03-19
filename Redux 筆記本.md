@@ -119,8 +119,9 @@ https://react-redux.js.org/introduction/getting-started#api-overview
  - 每一個需要store中數據的UI組件，都會檢查他們需要的狀態是否已被更新。
  - 每一個知道其狀態中的數據已被更改的組件，會強制使用新的數據重新渲染頁面，因此更新了新的內容在頁面。
 
+![image](https://user-images.githubusercontent.com/79159894/226208897-6f3aef8b-239f-4188-b6fd-4b1bac62ef2a.png)
 
-
+https://redux.js.org/tutorials/essentials/part-1-overview-concepts#redux-application-data-flow
 ## Redux vs Flux
 ### Flux
 Flux 是 fb用於構建客戶端網頁的架構，是一種應用程序中的數據流設計模式，Redux 是基於Flux的核心思想實現的一套解決方案。   
