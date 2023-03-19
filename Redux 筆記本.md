@@ -106,6 +106,18 @@ https://react-redux.js.org/introduction/getting-started#api-overview
 
 
 ## Redux Data Flow
+初始設置：
+ - 利用 root reducer 函數創建 redux store
+ - store 調用 root reducer，並將返回值保存為初始狀態
+ - UI 組建訪問 store中的當前狀態，並利用狀態來決定要渲染頁面的內容。並且訂閱了store，代表UI可以第一時間知道store的狀態有沒有更新。
+
+更新：
+ - 組件中event被觸發，ex: 用戶點擊了按鈕。
+ - 利用dispatch分派一個action 給 store。ex: dispatch({type: "counter/increment"})
+ - store 使用之前的狀態和現在的action，再次運行reducer 函數，並將返回值保存為新的狀態。
+ - store通知所有有訂閱的UI，store已更新。
+ - 每一個需要store中數據的UI組件，都會檢查他們需要的狀態是否已被更新。
+ - 每一個知道其狀態中的數據已被更改的組件，會強制使用新的數據重新渲染頁面，因此更新了新的內容在頁面。
 
 
 
