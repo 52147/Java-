@@ -49,10 +49,9 @@ nodeList是一個元素數組，類似於document.querySelectorAll()返回的類
 ### Attr
 通過createAtrribute()方法返回屬性，返回的是一個引用的對象。Attribute 在DOM中為node。
 ## DOM接口
-- Document 和window對象 通常是最常使用DOM接口的對象。
-- window對象代表瀏覽器
-- document對象代表 root document
-- Element 繼承Node接口，element和node 接口提供了對單個元素上使用的多種方法和屬性。這些element可能也有特定的接口來處理這些element 的數據類型。
+- 1. window對象代表瀏覽器
+- 2. document對象代表 root document
+- 3. Element 繼承Node接口，element和node 接口提供了對單個元素上使用的多種方法和屬性。這些element可能也有特定的接口來處理這些element 的數據類型。
 以下是一些常用的使用DOM所編寫的網頁和XML的API:
   - document.querySelector(selector)
   - document.querySelectorAll(name)
@@ -67,13 +66,19 @@ nodeList是一個元素數組，類似於document.querySelectorAll()返回的類
   - Window.onload
   - window.scrollTo()
   
-## window 對象
+## 1. window 對象
 - window接口包含DOM document。document屬性指向該window加載的DOM document。
 - 可以使用document.defaultView 屬性來獲取window
 - 全局變量window表示運行script的 window。
 - window 接口是種全局可用的函數、namespaces、對象、構造函數的家。不一定與用戶的window直接相關。
-  
+- 在所有有標籤頁功能的瀏覽器中，每個標籤頁都有自己的window對象。  
 ## 實例屬性 Instance Property
+window 接口繼承 EventTarget 接口的屬性。
+- window.innerHeight : 只能讀，獲得瀏覽器內的內容的高度，包含水平滾動條。
+- window.pageYOffset : 只能讀，scrollY的別名，它返回文黨當前沿著垂直軸滾動的像素數，值為0.0表示當前文黨的上邊緣與window內容的上邊緣對齊。  
+## 2. document 對象  
+  
+## 3. element 對象
 ### event.target
 觸發事件的對象的引用(DOM 元素)。   
 https://developer.mozilla.org/zh-CN/docs/Web/API/Event/target
