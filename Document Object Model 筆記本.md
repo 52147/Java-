@@ -66,6 +66,13 @@ nodeList是一個元素數組，類似於document.querySelectorAll()返回的類
   - window.content
   - Window.onload
   - window.scrollTo()
+  
+## window 對象
+- window接口包含DOM document。document屬性指向該window加載的DOM document。
+- 可以使用document.defaultView 屬性來獲取window
+- 全局變量window表示運行script的 window。
+- window 接口是種全局可用的函數、namespaces、對象、構造函數的家。不一定與用戶的window直接相關。
+  
 ## 實例屬性 Instance Property
 ### event.target
 觸發事件的對象的引用(DOM 元素)。   
