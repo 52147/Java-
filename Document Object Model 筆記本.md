@@ -72,7 +72,7 @@ nodeList是一個元素數組，類似於document.querySelectorAll()返回的類
 - 全局變量window表示運行script的 window。
 - window 接口是種全局可用的函數、namespaces、對象、構造函數的家。不一定與用戶的window直接相關。
 - 在所有有標籤頁功能的瀏覽器中，每個標籤頁都有自己的window對象。  
-## 實例屬性 Instance Property
+### 實例屬性 Instance Property
 window 接口繼承 EventTarget 接口的屬性。
 - window.innerHeight : 只能讀，獲得瀏覽器內的內容的高度，包含水平滾動條。
 - window.pageYOffset : 只能讀，scrollY的別名，它返回文黨當前沿著垂直軸滾動的像素數，值為0.0表示當前文黨的上邊緣與window內容的上邊緣對齊。  
