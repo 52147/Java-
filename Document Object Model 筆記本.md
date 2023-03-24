@@ -35,7 +35,12 @@ Dom 編程會像以下例子一樣簡單，ex: 使用window對象的alert()顯�
   <body></body>
 </html>  
 ```
-
+## 數據類型
+未簡單起見，在API中的語法中，通常會使用element代指節點，使用nodeList來代指結點數組，使用attribute來代指結點屬性。
+|  表头   | 表头  |
+|  ----  | ----  |
+| document  | 单元格 |
+| element  | 是指由DOM API中成員返回類型為element的一個元素。ex: document.createElement() 會返回一個node的引用對像，代表返回了在DOM中創建的element。 |  
 ## 實例屬性 Instance Property
 ### event.target
 觸發事件的對象的引用(DOM 元素)。   
