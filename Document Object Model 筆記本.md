@@ -1,7 +1,7 @@
 # Document Object Model(DOM)文黨對象模型 筆記本
-## Document
-- 一個網頁頁面是一個檔案，這個檔案可以在瀏覽器窗口或作為HTML源碼顯示出來。
-- DOM則為對Document的另外一種表示，即可以利用js對Document進行儲存和修改。
+## document
+- 一個網頁頁面是一個document，這個document可以在瀏覽器窗口或作為HTML源碼顯示出來。
+- DOM為對Document的另外一種表示，即可以利用js對Document進行儲存和修改。
 
 ## DOM
 - DOM是HTML和XML檔案的程式接口。
