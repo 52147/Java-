@@ -40,7 +40,8 @@ Dom 編程會像以下例子一樣簡單，ex: 使用window對象的alert()顯�
 |  表头   | 表头  |
 |  ----  | ----  |
 | document  | 单元格 |
-| element  | 是指由DOM API中成員返回類型為element的一個元素。ex: document.createElement() 會返回一個node的引用對像，代表返回了在DOM中創建的element。 |  
+| element  | - 是指由DOM API中成員返回類型為element的一個元素。
+  - ex: document.createElement() 會返回一個node的引用對像，代表返回了在DOM中創建的element。 |  
 ## 實例屬性 Instance Property
 ### event.target
 觸發事件的對象的引用(DOM 元素)。   
