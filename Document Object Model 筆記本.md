@@ -48,7 +48,24 @@ nodeList是一個元素數組，類似於document.querySelectorAll()返回的類
  - list[1]
 ### Attr
 通過createAtrribute()方法返回屬性，返回的是一個引用的對象。Attribute 在DOM中為node。
- 
+## DOM接口
+- Document 和window對象 通常是最常使用DOM接口的對象。
+- window對象代表瀏覽器
+- document對象代表 root document
+- Element 繼承Node接口，element和node 接口提供了對單個元素上使用的多種方法和屬性。這些element可能也有特定的接口來處理這些element 的數據類型。
+以下是一些常用的使用DOM所編寫的網頁和XML的API:
+  - document.querySelector(selector)
+  - document.querySelectorAll(name)
+  - document.createElement(name)
+  - parentNode.appendChild(node)
+  - element.innerHTML
+  - element.style.left
+  - element.setAttribute()
+  - element.getAttribute()
+  - element.addEventListener()
+  - window.content
+  - Window.onload
+  - window.scrollTo()
 ## 實例屬性 Instance Property
 ### event.target
 觸發事件的對象的引用(DOM 元素)。   
