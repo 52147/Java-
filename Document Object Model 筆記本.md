@@ -10,6 +10,31 @@
 ## DOM 與 js
 - DOM 不是js的一部分，DOM 是用來創建web的 web API。
 - js也可以不使用DOM。ex: node.js運行 js程序時，使用了另外一組不同於DOM API的API，因此DOM API不是node.js在執行時期的主要API。
+- DOM被設計為獨立於程式語言，使的document結構可以從單一、一致的API獲得。雖然大多數網頁開發人員都通過js使用DOM，建構DOM可以被任何語言實現。ex: python
+## 如何訪問DOM
+當我們在創建一個腳本時，無論是無論是使用<script>或是使用腳本加載的方法，都可以使用doument或window API來操作來獲取document本身或document的子類(網頁上的各種元素)。
+Dom 編程會像以下例子一樣簡單，ex: 使用window對象的alert()顯示一個警告信息。
+```javascript
+<body onload = "window.alert('welcome!');">
+</body>
+```
+但通常不建議混合使用頁面結構(html)和DOM操作(js)，因此這裡的例子是，用一個函數創建一個h1 element，然後向該元素添加text，然後再將其添加到document tree：
+
+```javascript
+<html lang = "en">
+  <head>
+    <script>
+      window.onload = () =>{
+        const heading = document.createElement("h1");
+        const headingText = document.createTextNode("123456789");
+        heading.appendChild(headingText);
+        document.body.appendChild(heading);
+      };
+    </script>
+  </head>
+  <body></body>
+</html>  
+```
 
 ## 實例屬性 Instance Property
 ### event.target
