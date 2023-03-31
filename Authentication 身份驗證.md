@@ -64,8 +64,19 @@ Header.Payload.Signature.
 Authorization: Bearer <jwt_token>
 ```
 服務端收到數據請求後，從Authorization字段中取出token，並驗證其合法性，解析token內容，獲取用戶身份。
+
 ### 驗證token
-	
+
+驗證 token合法性需要確認:
+1. token有沒有過期
+2. 是不是自己簽發的
+
+從payload部分解析，用Base64 解碼出iat, nbf, exp三個時間段。
+檢查是否有滿足以下關係：
+iat(簽發時間) <= nbf(生效時間) < 當前時間 < exp 過期時間
+
+
+接著取出token的前2個部分(Header.Payload)，再計算一次簽名(Signature)，看計算結果是否一致。
 	
 	
 http://www.ayqy.net/blog/token-based-login/
