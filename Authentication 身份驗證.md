@@ -68,7 +68,7 @@ Header.Payload.Signature.
    - jti: JWT ID，唯一標示
 	
 3. Signature
-## 後端傳輸
+### 後端傳輸
 服務端生成token之後，放在響應體response body，傳遞到客戶端。  	
 
 客戶端收到之後，將token存放在 LocalStorage/SessionStorage中，之後請求數據時，將token放在請求頭的Authentication字段裡待到服務端。  	
@@ -87,9 +87,9 @@ Authorization: Bearer <jwt_token>
 從payload部分解析，用Base64 解碼出iat, nbf, exp三個時間段。  	
 
 檢查是否有滿足以下關係：  	
-
+```
 iat(簽發時間) <= nbf(生效時間) < 當前時間 < exp 過期時間
-
+```
 
 接著取出token的前2個部分(Header.Payload)，再計算一次簽名(Signature)，看計算結果是否一致。
 	
