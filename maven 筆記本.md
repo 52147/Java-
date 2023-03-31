@@ -49,7 +49,9 @@ maven 維護了一個中央倉庫，所有第三方庫將自身的jar以及相�
 - verify
 - install
 - site
-- deploy
+- deploy   
+ 
+
 https://www.liaoxuefeng.com/wiki/1252599548343744/1309301178105890
 
 https://www.liaoxuefeng.com/wiki/1252599548343744/1309301146648610
