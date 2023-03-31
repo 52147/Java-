@@ -68,7 +68,7 @@ Header.Payload.Signature.
    - jti: JWT ID，唯一標示
 	
 3. Signature
-### 後端傳輸
+### 後端傳輸token到前端
 服務端生成token之後，放在響應體response body，傳遞到客戶端。  	
 
 客戶端收到之後，將token存放在 LocalStorage/SessionStorage中，之後請求數據時，將token放在請求頭的Authentication字段裡待到服務端。  	
