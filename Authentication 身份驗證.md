@@ -10,10 +10,12 @@
 1. 基於Session
 2. 基於Token
 ### Token
-token 相當於加密過的session紀錄，含有 	
-	1. 用戶id
-	2. token 簽發時間
-	3. 有效期限
+token 相當於加密過的session紀錄，含有:
+
+- 1. 用戶id
+- 2. token 簽發時間
+- 3. 有效期限
+
 任何帶有該token的請求，都會被服務端認為是來自用戶9527的消息，直到1天之後，該token過期失效，服務端將不在認可其代表的用戶身份。  	
 ```
 {
@@ -26,6 +28,7 @@ token 相當於加密過的session紀錄，含有
 // 加密后
 895u3485y3748%^HGdsbafjhb	
 ```	
+
 ### 基於Token 的驗證方式
 登入流程：  	
 1. 客戶端使用帳號、密碼登入，服務端根據用戶信息生成token，發送給客戶端。
@@ -35,15 +38,20 @@ token 相當於加密過的session紀錄，含有
 1. 客戶端在請求用戶信息時上帶上token，發送給服務端。
 2. 服務端接到請求後，解析token得出用戶身份，返回數據或操作結果給客戶端。  	
 
-註銷流程：  	  	  	  	
+註銷流程：  	
+
 客戶端帶上token，發送給服務端，服務端將token註銷。  	
 ### Json Web Token(JWT)
-Json Web Token 是一種比較受歡迎的token通信規範，用來安全地表示要在雙方傳遞消息的聲明，能夠通過url傳輸。  	  	
-JWT的組成有3個部分：
+Json Web Token 是一種比較受歡迎的token通信規範，用來安全地表示要在雙方傳遞消息的聲明，能夠通過url傳輸。  	
+
+JWT的組成有3個部分：  	
+
 ```
 Header.Payload.Signature.
-```
-用.來隔開3個部分。
+``` 	
+
+用.來隔開3個部分。  	
+
 1. Header:
 	- 表示token相關的基本信息。ex: token類型、加密方式（算法）。
 	- typ: token type
@@ -71,12 +79,15 @@ Authorization: Bearer <jwt_token>
 
 ### 驗證token
 
-驗證 token合法性需要確認:
+驗證 token合法性需要確認:  	
+
 1. token有沒有過期
 2. 是不是自己簽發的
 
-從payload部分解析，用Base64 解碼出iat, nbf, exp三個時間段。
-檢查是否有滿足以下關係：
+從payload部分解析，用Base64 解碼出iat, nbf, exp三個時間段。  	
+
+檢查是否有滿足以下關係：  	
+
 iat(簽發時間) <= nbf(生效時間) < 當前時間 < exp 過期時間
 
 
