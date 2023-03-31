@@ -31,7 +31,7 @@ token 相當於加密過的session紀錄，含有
 1. 客戶端在請求用戶信息時上帶上token，發送給服務端。
 2. 服務端接到請求後，解析token得出用戶身份，返回數據或操作結果給客戶端。  	
 
-註銷流程：  	  	
+註銷流程：  	  	  	  	
 客戶端帶上token，發送給服務端，服務端將token註銷。  	
 ### Json Web Token(JWT)
 Json Web Token 是一種比較受歡迎的token通信規範，用來安全地表示要在雙方傳遞消息的聲明，能夠通過url傳輸。  	  	
@@ -58,6 +58,7 @@ Header.Payload.Signature.
 3. Signature
 ## 後端傳輸
 服務端生成token之後，放在響應體response body，傳遞到客戶端。  	
+
 客戶端收到之後，將token存放在 LocalStorage/SessionStorage中，之後請求數據時，將token放在請求頭的Authentication字段裡待到服務端。  	
 ```
 Authorization: Bearer <jwt_token>
