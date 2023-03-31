@@ -1,5 +1,5 @@
 # Authentication 身份驗證
-## 身份驗證: Token, Session
+## 身份驗證: Token、Session
 身份驗證指要求用戶登錄才能訪問某些信息。  	
 為確認身份，用戶必須提供只有用戶和服務器知道的信息（身份驗證因子，ex: 用戶名, 密碼）。  	
 常見的身份驗證有兩種方式：  	
@@ -32,11 +32,13 @@ token 相當於加密過的session紀錄，含有
 2. 服務端接到請求後，解析token得出用戶身份，返回數據或操作結果給客戶端。  	
 
 註銷流程：  	
-客戶端帶上token，發送給服務端，服務端將token註銷。
+客戶端帶上token，發送給服務端，服務端將token註銷。  	
 ### Json Web Token(JWT)
-Json Web Token 是一種比較受歡迎的token通信規範，用來安全地表示要在雙方傳遞消息的聲明，能夠通過url傳輸。  	
-JWT的組成有3個部分：  	
-Header.Payload.Signature
+Json Web Token 是一種比較受歡迎的token通信規範，用來安全地表示要在雙方傳遞消息的聲明，能夠通過url傳輸。  	  	
+JWT的組成有3個部分：
+```
+Header.Payload.Signature.
+```
 用.來隔開3個部分。
 1. Header:
 	- 表示token相關的基本信息。ex: token類型、加密方式（算法）。
@@ -55,8 +57,8 @@ Header.Payload.Signature
 	
 3. Signature
 ## 後端傳輸
-服務端生成token之後，放在響應體response body，傳遞到客戶端。
-客戶端收到之後，將token存放在 LocalStorage/SessionStorage中，之後請求數據時，將token放在請求頭的Authentication字段裡待到服務端。
+服務端生成token之後，放在響應體response body，傳遞到客戶端。  	
+客戶端收到之後，將token存放在 LocalStorage/SessionStorage中，之後請求數據時，將token放在請求頭的Authentication字段裡待到服務端。  	
 ```
 Authorization: Bearer <jwt_token>
 ```
