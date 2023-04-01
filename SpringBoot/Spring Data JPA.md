@@ -26,3 +26,11 @@ JPA 特性：
    - 能夠支持批量的更新和修改，可以使用JOIN, GROUP BY, HAVING和子查詢。
 5. 高級特性：
    - JPA能夠支持面向對象的特性，例如，類之間的繼承，多態和類之間的關係
+
+## Spring Data JPA
+Spring Data JPA 是在實現JPA規範的基礎上封裝一套JPA應用框架，雖然ORM框架實現了JPA規範，但在不同的ORM框架間切換，仍然需要編寫不同的代碼，而使用Spring Data JPA能夠在不同的ORM框架間進行切換而不需要更改代碼。   
+
+Spring Data JPA通過統一ORM 框架的訪問持久層操作，來提高開發效率。   
+
+![image](https://user-images.githubusercontent.com/79159894/229261133-04c2dae8-4325-4f86-9825-774c2a002529.png)
+https://zhuanlan.zhihu.com/p/115507328
