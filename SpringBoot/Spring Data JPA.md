@@ -1,8 +1,15 @@
 # Spring Data JPA
-## ORM
 
+
+## ORM(Object Relative Database Mapping)
+ORM代表對象關係映射，
+## Hibernate
+Hibernate是一種ORM框架，
+## ORM、Hibernate、JPA 間的關係
+Hibernate 是JPA的實現，是一種框架。
+Spring Data JPA 是 JPA的抽象層，底層依賴Hibernate。
 ## JPA(Java Persistance API)
-JPA是java 持久化API，是基於ORM規範，由一系列的接口與抽象類所組成。
+JPA是java 持久化API，是基於ORM規範，及一種對象/關聯映射工具，由一系列的接口與抽象類所組成，用來管理java應用中的關係數據。
 
 JPA 特性：
 1. 標準化：
