@@ -34,3 +34,9 @@ Spring Data JPA通過統一ORM 框架的訪問持久層操作，來提高開發�
 
 ![image](https://user-images.githubusercontent.com/79159894/229261133-04c2dae8-4325-4f86-9825-774c2a002529.png)
 https://zhuanlan.zhihu.com/p/115507328
+## 使用JPA API
+1. 創建Customer 實體類對應的數據庫表 customer
+2. 創建maven 項目，並加入相關依賴
+3. 加上JPA配置信息
+4. 編寫客戶Customer實體類，配置類屬性和表之間的映射關係
+5. 在test package中創建 CustomerDaoTest，使用Junit進行測試
