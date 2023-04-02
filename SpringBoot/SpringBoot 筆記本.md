@@ -2,7 +2,7 @@
 ## SpringBoot 介紹
 1. SpringBoot是一種框架，他繼承了Spring 框架原有的特性，並簡化了Spring 應用的搭建和開發過程。
 2. SpringBoot集成大量框架，以解決依賴包間的衝突。
-3. 嵌入Tomcat, Jetty, Undertow
+3. 嵌入Tomcat(embedded tomcat container), Jetty, Undertow
 4. 自動配置Spring與第三方library
 5. 提供隨時就緒的功能，例如：Metrics、程式的健康檢查、外部化配置。
 6. 無任何需提前配置XML的需求。
