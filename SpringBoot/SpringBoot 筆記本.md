@@ -29,18 +29,20 @@ MVC為一種軟體架構模式，把軟體設計分為3個部分：
 1. Controller: 負責API接口
 2. Service
 3. entity
-4. Respository: 負責與資料庫進行操作
-5. model:
+4. Respository: 
+   - 負責與資料庫進行操作
+   - 繼承 JpaRepository 的抽象介面，讓我們可以透過使用介面，直接與資料庫進行映射。
+   - JpaRepository API中包含，新增、修改、刪除、排序、分頁、搜尋id等功能。
+6. model:
 
 https://medium.com/learning-from-jhipster/20-controller-service-repository%E7%9A%84%E5%BB%BA%E7%AB%8B-1-jparepository-%E7%9A%84%E4%BD%BF%E7%94%A8-6606de7c9d41
 ## Controller 介紹
 控制器類來處理 HTTP 請求和回應。
 @RestController 和 @RequestMapping 
 ## Respository 介紹
-繼承 JpaRepository 的抽象介面，讓我們可以透過使用介面，直接與資料庫進行映射。
-JpaRepository API中包含，新增、修改、刪除、排序、分頁、搜尋id等功能。
 
-https://medium.com/learning-from-jhipster/20-controller-service-repository%E7%9A%84%E5%BB%BA%E7%AB%8B-1-jparepository-%E7%9A%84%E4%BD%BF%E7%94%A8-6606de7c9d41
+使用 Spring Data JPA 定義介面來操作資料庫。定義介面時，需要繼承 JpaRepository 介面並定義一些查詢方法。
+
 
 ## Entity 介紹
 實體類來表示存放在資料庫中的各種數據。
@@ -51,14 +53,14 @@ https://medium.com/learning-from-jhipster/20-controller-service-repository%E7%9A
 - @Table(name = "posts")：對應資料庫中資料表的名稱   
 - @Column(name = "created_at")：對應資料庫中資料表的欄位的名稱    
 - @Id：代表該資料表的Primary Key    
-- @ManyToOne(fetch = FetchType.LAZY):@ManyToOne代表在兩個實體間，建立多對一的關係。fetch = FetchType.LAZY 為@ManyToOne的一個參數，代表從數據庫中獲取實體時，應如何加載實體，LAZY代表只有在需要時，才加載關聯實體，這樣可以通過減少不必要的數據庫查詢來提高性能。
+- @ManyToOne(fetch = FetchType.LAZY):
+  - @ManyToOne代表在兩個實體間，建立多對一的關係。
+  - fetch = FetchType.LAZY 為@ManyToOne的一個參數，代表從數據庫中獲取實體時，應如何加載實體，LAZY代表只有在需要時，才加載關聯實體，這樣可以通過減少不必要的數據庫查詢來提高性能。
 - @GeneratedValue(strategy = GenerationType.IDENTITY)： 
   - 在JPA中用於實體生成主見值的方式。 
   - GenerationType.IDENTITY代表數據庫負責在表中插入新列時，生成主鍵值。
   - 此方式常用在主鍵自增(support auto-incremented columns)的數據庫。
   - @id必須為數值類型，例如：Long, Integer
-
-
 - @JoinColumn(name = "user_id"):
   - 用於指定表中外鍵的列名 
 - @JsonIgnoreProperties({"hibernateLazyInitializer"})
