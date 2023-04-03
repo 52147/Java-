@@ -3,6 +3,8 @@
 
 ## ORM(Object Relative Database Mapping)
 ORM代表對象關係映射，
+ORM 利用 Model 數據層與數據訪問層做關聯，代表直接利用數據層的名稱與資料表名稱互相對應關聯起來。
+在利用hibernate與JPA對資料庫做CRUD。
 ## Hibernate
 Hibernate是一種ORM框架，
 ## ORM、Hibernate、JPA 間的關係
@@ -30,10 +32,18 @@ JPA 特性：
 ## Spring Data JPA
 Spring Data JPA 是在實現JPA規範的基礎上封裝一套JPA應用框架，雖然ORM框架實現了JPA規範，但在不同的ORM框架間切換，仍然需要編寫不同的代碼，而使用Spring Data JPA能夠在不同的ORM框架間進行切換而不需要更改代碼。   
 
-Spring Data JPA通過統一ORM 框架的訪問持久層操作，來提高開發效率。   
+特性：   
+
+1. Spring Data JPA通過統一ORM 框架的訪問持久層操作，來提高開發效率。   
+2. 可以配置多個DataSource
+3. 可以對多個資料表查詢
+4. 可以自訂sql 查詢
+5. 有分頁與排序功能
 
 ![image](https://user-images.githubusercontent.com/79159894/229261133-04c2dae8-4325-4f86-9825-774c2a002529.png)
-https://zhuanlan.zhihu.com/p/115507328
+https://zhuanlan.zhihu.com/p/115507328    
+
+https://ithelp.ithome.com.tw/articles/10194906
 ## 使用JPA API
 1. 創建Customer 實體類對應的數據庫表 customer
 2. 創建maven 項目，並加入相關依賴
