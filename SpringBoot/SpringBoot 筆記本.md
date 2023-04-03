@@ -10,7 +10,7 @@
 
 https://ithelp.ithome.com.tw/articles/10213097
 
-## SpringBoot, Spring MVC, Spring
+## SpringBoot vs Spring MVC vs Spring
 SpringBoot包含了 Spring MVC，同時簡化了配置。   
 
 SpringBoot 和 Spring MVC都是一種框架。    
