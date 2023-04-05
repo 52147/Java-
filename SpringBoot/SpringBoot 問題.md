@@ -81,6 +81,3 @@ sql 查詢試圖 引用user 表中名稱為a1的column，但實際上a1不存在
 
 1. 確保在entity中引用了正確的col 名稱
 2. 確保 db 中的table 有個名稱a1的col.    
-
-
-https://bbs.huaweicloud.com/blogs/351111：
