@@ -11,4 +11,33 @@ jest 可以用來測試後端的node.js 與前端Vue, Angular, React。
 
 ## jest 指令
 
-## jest 方法
+## jest 測試方法
+### 匹配器 toBe()
+#### toBe()
+```
+test('two plus two is four', () => {
+  expect(2 + 2).toBe(4);
+});
+```
+expect() 返回了一個預期對象，為這個預期對象調用一個匹配器.toBe()。
+#### toEqual()
+toBe()使用Object.is來進行測試，如果需要測試object的value，可以用toEqual。
+#### not
+```
+test('adding positive numbers is not zero', () => {
+  for (let a = 1; a < 10; a++) {
+    for (let b = 1; b < 10; b++) {
+      expect(a + b).not.toBe(0);
+    }
+  }
+});
+```
+可以使用not來進行與expect結果相反的測試。
+#### toMatch
+toMatch
+#### toContain
+toContain用來檢查，數組中是否包含特定的對象。
+#### toThrow
+toThrow 用來測試函數在調用時，是否拋出了錯誤。
+
+## mock functions 模擬函數
