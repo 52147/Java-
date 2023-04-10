@@ -18,6 +18,9 @@ jest 可以用來測試後端的node.js 與前端Vue, Angular, React。
 
 利用js parser，在statement, function, branch位置的代碼 parse成AST，然後對AST進行插樁。
 
+![image](https://user-images.githubusercontent.com/79159894/230812854-cc09758a-451c-4763-b0c1-da61640d655e.png)
+
+
 https://juejin.cn/post/7019161146347388959
 ## 使用jest 流程
 1. npm 安裝
