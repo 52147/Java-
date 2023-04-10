@@ -22,6 +22,9 @@ jest 可以用來測試後端的node.js 與前端Vue, Angular, React。
 
 
 https://juejin.cn/post/7019161146347388959
+
+## Redux jest test
+https://redux.js.org/usage/writing-tests
 ## 使用jest 流程
 1. npm 安裝
 2. jest 配置
