@@ -28,12 +28,16 @@ MVC為一種軟體架構模式，把軟體設計分為3個部分：
 ## Spring中的檔案架構
 1. Controller: 負責API接口
 2. Service
-3. entity
-4. Respository: 
-   - 負責與資料庫進行操作
+   - Service 位於Controller 和 Respository 之間，它提供了兩者間的抽象層。
+   - 封裝了Respositoty的實現細節並向Controller提供了一個簡單的API。
+   - 負責實現業務邏輯和數據訪問
+4. entity
+5. Respository: 
+   - 負責與資料庫進行操作和對實體進行操作的接口。
    - 繼承 JpaRepository 的抽象介面，讓我們可以透過使用介面，直接與資料庫進行映射。
    - JpaRepository API中包含，新增、修改、刪除、排序、分頁、搜尋id等功能。
 6. model:
+
 
 https://medium.com/learning-from-jhipster/20-controller-service-repository%E7%9A%84%E5%BB%BA%E7%AB%8B-1-jparepository-%E7%9A%84%E4%BD%BF%E7%94%A8-6606de7c9d41
 ## Controller 介紹
@@ -41,7 +45,7 @@ https://medium.com/learning-from-jhipster/20-controller-service-repository%E7%9A
 @RestController 和 @RequestMapping 
 ## Respository 介紹
 
-使用 Spring Data JPA 定義介面來操作資料庫。定義介面時，需要繼承 JpaRepository 介面並定義一些查詢方法。
+使用 Spring Data JPA 定義interface來操作資料庫。定義interface時，需要繼承 JpaRepository interface並使用其interface中的一些查詢方法。
 
 
 ## Entity 介紹
