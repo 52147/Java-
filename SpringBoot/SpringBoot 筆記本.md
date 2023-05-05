@@ -65,7 +65,10 @@ MVC為一種軟體架構模式，把軟體設計分為3個部分：
    - 負責與資料庫進行操作和對實體entity進行操作的接口。
    - 繼承 JpaRepository 的抽象介面，讓使用者可以透過使用介面，直接與資料庫進行映射，而無需了解底層數據庫的實現。
    - JpaRepository API中包含，新增、修改、刪除、排序、分頁、搜尋id等功能。
-8. model:
+8. Mapper:
+   - 為特定entity定義數據庫訪問和操作方法。
+   - 通常由MyBatis或MyBatis-Plus library提供通用的Mapper接口BaseMapper<T>，該接口為entity 提供基本的CURD操作，通常在Service Implementation 中使用。
+9. model:
 
 
 https://medium.com/learning-from-jhipster/20-controller-service-repository%E7%9A%84%E5%BB%BA%E7%AB%8B-1-jparepository-%E7%9A%84%E4%BD%BF%E7%94%A8-6606de7c9d41
