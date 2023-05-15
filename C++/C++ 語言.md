@@ -46,6 +46,10 @@ namespace Outer {
 在這個例子中，Inner 命名空間嵌套在Outter命名空間中，所以我們可以使用 Outer::Inner::myFunction()訪問函數myFunction。
 
 ## std namespace
-- std:: 是在C++中使用的前綴，用於指定特定名稱屬於標準庫命名空間standard library。
-- 
+- std:: 前綴表示所屬的類或函數是屬於standard library的一部分。
+- standard library 提供了一組預定義的類、函數。
+- 這些library在std namespace下，以避免與使用者定義的名稱發生命名衝突。
+- 如果要使用standard library中的vector，會編寫std::vector。
+- 其他像是使用std::unordered_map, std::string, std::cout來訪問standard library 所提供的各種組件。
+
 
