@@ -52,4 +52,4 @@ namespace Outer {
 - 如果要使用standard library中的vector，會編寫std::vector。
 - 其他像是使用std::unordered_map, std::string, std::cout來訪問standard library 所提供的各種組件。
 
-
+## {}
