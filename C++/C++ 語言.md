@@ -55,7 +55,7 @@ namespace Outer {
 ## {}
 - {}在c++中，代表一個空的list。
 - 例如，用它來初始化容器:
-```
+```C++
 std::vector myVector = {};
 std::unordered_map map = {};
 std::unordered_map<std::string, int> myMap = {};
