@@ -53,3 +53,11 @@ namespace Outer {
 - 其他像是使用std::unordered_map, std::string, std::cout來訪問standard library 所提供的各種組件。
 
 ## {}
+- {}在c++中，代表一個空的list。
+- 例如，用它來初始化容器:
+```
+std::vector myVector = {};
+std::unordered_map map = {};
+std::unordered_map<std::string, int> myMap = {};
+std::set<int> mySet = {};
+```
