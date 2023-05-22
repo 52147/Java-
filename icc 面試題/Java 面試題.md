@@ -210,3 +210,43 @@ public void processFile（字符串文件名）{
 無論是否發生異常，finally 塊都確保使用 close() 方法正確關閉 FileInputStream，該方法在嵌套的 try-catch 塊內調用，以處理 close() 方法拋出的任何潛在 IOException。
 
 通過使用 try-finally 塊，您可以確保始終執行關鍵的清理任務，即使出現異常，也有助於防止資源洩漏並確保適當的資源管理。
+
+## HashMap Implementation
+HashMap is a commonly used data structure in Java that implements the Map interface, providing a key-value mapping. It allows efficient retrieval, insertion, and deletion of elements based on their keys. The internal implementation of HashMap in Java uses an array of buckets, where each bucket can contain multiple key-value pairs.
+
+Here's a simplified explanation of how HashMap is implemented:
+
+Hashing: When you put a key-value pair into a HashMap, the key is first hashed to generate an integer value. The hashing algorithm evenly distributes the keys across the array of buckets, aiming to minimize collisions (multiple keys hashing to the same index).
+
+Bucket Array: The HashMap internally maintains an array of buckets. Each bucket is essentially a linked list or a tree (depending on the collision resolution mechanism used) that holds the key-value pairs.
+
+Index Calculation: The hashed value of the key is used to calculate the index of the bucket in the array. This is typically done by applying a modulo operation on the hash value with the size of the array.
+
+Insertion: When inserting a key-value pair, the HashMap calculates the index of the bucket based on the key's hash value. It then appends the pair to the bucket. If there is a collision (i.e., multiple keys hash to the same index), the HashMap uses a collision resolution mechanism (usually linked list or tree) to handle the collision and maintain the key-value pairs appropriately.
+
+Retrieval: When you retrieve a value from the HashMap based on a key, the key is hashed, and the corresponding bucket index is calculated. The HashMap then searches for the key-value pair within the bucket using the key's equals() method.
+
+Resizing: As the number of elements in the HashMap increases, it may reach a threshold called the load factor. At this point, the HashMap resizes its internal array of buckets to accommodate more key-value pairs. Resizing involves creating a new array with a larger size and rehashing the existing key-value pairs into the new array.
+
+It's important to note that the actual implementation of HashMap in Java is more complex, with optimizations for performance and memory usage. For example, the Java HashMap implementation incorporates techniques like bucket balancing, tree conversion for large linked lists, and optimizations for specific data distributions.
+
+HashMap provides an efficient way to store and retrieve key-value pairs in Java, making it a versatile and widely used data structure for various applications.
+HashMap是Java中常用的一種數據結構，實現了Map接口，提供鍵值映射。 它允許基於元素的鍵高效地檢索、插入和刪除元素。 Java 中 HashMap 的內部實現使用了一個桶數組，其中每個桶可以包含多個鍵值對。
+
+下面簡單解釋一下 HashMap 的實現方式：
+
+哈希：將鍵值對放入 HashMap 時，首先對鍵進行哈希處理以生成一個整數值。 散列算法將鍵均勻分佈在桶數組中，旨在最大程度地減少衝突（多個鍵散列到同一索引）。
+
+桶數組：HashMap 內部維護了一個桶數組。 每個桶本質上是一個鍊錶或樹（取決於使用的衝突解決機制），其中包含鍵值對。
+
+索引計算：key的哈希值用於計算桶在數組中的索引。 這通常是通過對具有數組大小的散列值進行模運算來完成的。
+
+插入：當插入鍵值對時，HashMap根據鍵的哈希值計算桶的索引。 然後它將這一對附加到桶中。 如果發生衝突（即多個鍵散列到同一個索引），HashMap 使用衝突解決機制（通常是鍊錶或樹）來處理衝突並適當地維護鍵值對。
+
+檢索：根據key從HashMap中檢索value時，對該key進行hash，計算出對應的bucket index。 HashMap 然後使用鍵的 equals() 方法在桶中搜索鍵值對。
+
+調整大小：隨著 HashMap 中元素數量的增加，它可能會達到一個閾值，稱為加載因子。 此時，HashMap 調整其內部桶數組的大小以容納更多的鍵值對。 調整大小涉及創建一個具有更大大小的新數組，並將現有的鍵值對重新散列到新數組中。
+
+需要注意的是，Java 中 HashMap 的實際實現更為複雜，對性能和內存使用進行了優化。 例如，Java HashMap 實現結合了桶平衡、大型鍊錶的樹轉換以及特定數據分佈的優化等技術。
+
+HashMap 提供了一種在 Java 中存儲和檢索鍵值對的有效方法，使其成為各種應用程序中通用且廣泛使用的數據結構。
