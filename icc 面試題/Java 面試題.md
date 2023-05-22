@@ -115,4 +115,98 @@ Convention over Configuration：Spring Boot遵循“約定優於配置”的原�
 
 總體而言，Spring Boot 為構建 Java 應用程序提供了一個開發人員友好的環境，降低了配置和設置任務的複雜性。 它促進基於約定的開發，提供強大的功能，並與更廣泛的 Spring 生態系統無縫集成。
 
+## try-finally
+The try-finally block is a construct in Java used for exception handling and resource management. It allows you to specify code that should be executed regardless of whether an exception occurs or not. The finally block is typically used in conjunction with a try-catch block.
 
+Here's the basic syntax of a try-finally block:
+
+```
+try {
+    // Code that may throw an exception
+} finally {
+    // Code that will always be executed
+}
+```
+Here's how the try-finally block works:
+
+The code inside the try block is the section where you write the code that might throw an exception. It could be a single statement or a block of statements enclosed in curly braces.
+
+If an exception occurs within the try block, the execution of the normal flow of code is interrupted, and the control is transferred to the appropriate catch block (if one exists) to handle the exception.
+
+After the try block is executed, whether an exception occurred or not, the code inside the finally block is executed. The finally block is used to perform cleanup tasks, such as releasing resources, closing connections, or finalizing operations.
+
+Here's an example to illustrate the usage of try-finally:
+
+```
+public void processFile(String fileName) {
+    FileInputStream fileInputStream = null;
+    try {
+        fileInputStream = new FileInputStream(fileName);
+        // Code for processing the file
+    } catch (IOException e) {
+        // Exception handling code
+    } finally {
+        // Closing the file input stream
+        try {
+            if (fileInputStream != null) {
+                fileInputStream.close();
+            }
+        } catch (IOException e) {
+            // Exception handling code for closing the file
+        }
+    }
+}
+```
+In this example, the try block is used to create a FileInputStream to read a file. If an IOException occurs during the processing of the file, the control will be transferred to the catch block for handling the exception.
+
+Regardless of whether an exception occurs or not, the finally block ensures that the FileInputStream is properly closed using the close() method, which is invoked inside a nested try-catch block to handle any potential IOException thrown by the close() method.
+
+By using the try-finally block, you can ensure that critical cleanup tasks are always performed, even in the presence of exceptions, helping to prevent resource leaks and ensure proper resource management.
+
+
+try-finally 塊是 Java 中用於異常處理和資源管理的結構。 它允許您指定無論是否發生異常都應該執行的代碼。 finally 塊通常與 try-catch 塊結合使用。
+
+下面是 try-finally 塊的基本語法：
+
+爪哇
+複製代碼
+嘗試 {
+     // 可能拋出異常的代碼
+} 最後 {
+     // 永遠執行的代碼
+}
+以下是 try-finally 塊的工作原理：
+
+try 塊中的代碼是您編寫可能引發異常的代碼的部分。 它可以是單個語句或用花括號括起來的語句塊。
+
+如果 try 塊內發生異常，則正常代碼流的執行將被中斷，控制權將轉移到適當的 catch 塊（如果存在）以處理異常。
+
+try塊執行完之後，不管有沒有異常，finally塊裡面的代碼都會執行。 finally 塊用於執行清理任務，例如釋放資源、關閉連接或完成操作。
+
+下面用一個例子來說明try-finally的用法：
+
+爪哇
+複製代碼
+public void processFile（字符串文件名）{
+     FileInputStream fileInputStream = null;
+     嘗試 {
+         fileInputStream = new FileInputStream(文件名);
+         // 處理文件的代碼
+     } 趕上（IOException e）{
+         //異常處理代碼
+     } 最後 {
+         // 關閉文件輸入流
+         嘗試 {
+             如果（文件輸入流！=空）{
+                 文件輸入流.close();
+             }
+         } 趕上（IOException e）{
+             // 關閉文件的異常處理代碼
+         }
+     }
+}
+在此示例中，try 塊用於創建 FileInputStream 以讀取文件。 如果在處理文件的過程中發生了IOException，控制權將被轉移到catch塊來處理異常。
+
+無論是否發生異常，finally 塊都確保使用 close() 方法正確關閉 FileInputStream，該方法在嵌套的 try-catch 塊內調用，以處理 close() 方法拋出的任何潛在 IOException。
+
+通過使用 try-finally 塊，您可以確保始終執行關鍵的清理任務，即使出現異常，也有助於防止資源洩漏並確保適當的資源管理。
