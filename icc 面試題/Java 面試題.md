@@ -250,3 +250,289 @@ HashMap是Java中常用的一種數據結構，實現了Map接口，提供鍵值
 需要注意的是，Java 中 HashMap 的實際實現更為複雜，對性能和內存使用進行了優化。 例如，Java HashMap 實現結合了桶平衡、大型鍊錶的樹轉換以及特定數據分佈的優化等技術。
 
 HashMap 提供了一種在 Java 中存儲和檢索鍵值對的有效方法，使其成為各種應用程序中通用且廣泛使用的數據結構。
+
+## 循環依賴
+In the context of dependency injection and inversion of control (IoC), circular dependencies can potentially occur. However, there is no direct relationship between constructor and setter methods that would cause circular dependencies.
+
+Dependency Injection and Inversion of Control: Dependency injection and inversion of control are related concepts aimed at decoupling dependencies between components, making code more flexible and testable. Dependency injection involves passing dependencies from one object to another, rather than having objects create or manage their dependencies. Inversion of control is a principle that delegates object creation and dependency management to an external container or framework.
+
+Circular Dependency: Circular dependency refers to a situation where two or more objects depend on each other in a cyclic manner, with each object relying on the creation or initialization of the other. In this scenario, the objects cannot be fully initialized or created, leading to a deadlock or failure in program execution.
+
+Constructor Circular Dependency: Constructor circular dependency occurs when the constructor of object A depends on an instance of object B, and the constructor of object B depends on an instance of object A. In this case, neither object A nor B can be fully initialized, resulting in a circular dependency issue.
+
+Setter Method Circular Dependency: Unlike constructors, circular dependencies are less common when using setter methods for dependency injection. This is because setter methods allow objects to be created first and then have their dependencies set afterward. However, if there are multiple objects with interdependencies and the order of setter method injection is not correct, circular dependencies can still occur.
+
+Aspect-Oriented Programming (AOP): AOP is a programming paradigm that allows cross-cutting concerns to be modularized by inserting additional code logic during runtime. AOP is often implemented using proxy techniques, which can potentially affect the behavior of dependency injection. However, AOP itself does not directly cause circular dependencies.
+
+To summarize, both dependency injection and inversion of control can potentially lead to circular dependencies. There is no direct relationship between constructor and setter methods that causes circular dependencies. AOP is a programming paradigm that can influence dependency injection but does not directly cause circular dependencies.
+在依賴注入（Dependency Injection）和控制反轉（Inversion of Control）的情況下，循環依賴可能會發生。而在構造函數（Constructor）和設值方法（Setter）之間，並沒有直接導致循環依賴的關係。
+
+依賴注入和控制反轉：依賴注入和控制反轉是相關的概念，它們旨在解耦組件之間的依賴關係，使代碼更加靈活和可測試。依賴注入是指將依賴關係從一個對像傳遞到另一個對象，而不是由對象自己創建或管理依賴。控制反轉是一種思想，它將對象的創建和依賴關係的管理交給外部的容器或框架。
+
+循環依賴：循環依賴指的是兩個或多個對象彼此依賴形成一個環路，其中每個對像都依賴於另一個對象的創建或初始化。這種情況下，對象之間無法完成初始化或創建，導致程序無法正常執行。
+
+構造函數循環依賴：當對象A的構造函數依賴於對象B的實例，並且對象B的構造函數又依賴於對象A的實例時，就會發生構造函數循環依賴。在這種情況下，對象A和B無法同時完成初始化，從而導致循環依賴的問題。
+
+Setter方法循環依賴：與構造函數不同，使用Setter方法進行依賴注入時，循環依賴的問題通常較少發生。這是因為使用Setter方法可以先創建對象並設置依賴，然後再將該對象注入到其他對像中。但是，如果存在多個對象之間相互依賴，且Setter方法的注入順序不正確，仍然可能發生循環依賴。
+
+AOP（面向切面編程）：AOP是一種編程範式，它允許在程序運行期間橫向地插入額外的代碼邏輯，以實現橫切關注點的模塊化。 AOP通常通過代理技術實現，在代理過程中，可能會影響依賴注入的行為，但本身並不直接導致循環依賴。
+
+總結起來，依賴注入和控制反轉的方式都可能導致循環依賴的問題。在構造函數和Setter方法之間，並沒有直接導致循環依賴的關係。而AOP是一種編程範式，它可以在依賴注入的過程中起到一定的影響，但並不是直接導致循環依賴的原因。
+
+## Mybatis
+MyBatis is a popular Java-based persistence framework that simplifies the integration of relational databases with applications. It offers several advantages and has a few limitations:
+
+Advantages of MyBatis:
+
+SQL Control: MyBatis provides explicit control over SQL queries. Developers can write SQL statements directly, which allows fine-grained control and optimization of database operations. This flexibility is particularly beneficial when dealing with complex or customized database queries.
+
+Lightweight and Flexible: MyBatis is lightweight and does not impose heavy overhead on application performance. It offers flexibility in mapping SQL queries to Java objects, allowing developers to customize mappings based on specific requirements.
+
+Dynamic SQL: MyBatis supports dynamic SQL, which enables the construction of SQL statements at runtime. Dynamic SQL allows for conditional statements, loops, and dynamic field selection, making it easier to build flexible and adaptable queries.
+
+Level of Abstraction: MyBatis provides a balanced level of abstraction between SQL and Java objects. It allows developers to work with raw SQL and native database features while still providing object-relational mapping capabilities for simpler CRUD operations.
+
+Integration with Existing Codebase: MyBatis can be easily integrated with existing Java codebases. It supports seamless integration with frameworks like Spring, enabling smooth integration into enterprise applications.
+
+Limitations of MyBatis:
+
+Steeper Learning Curve: MyBatis requires developers to have a solid understanding of SQL and relational databases. It may have a steeper learning curve for those who are not familiar with SQL or prefer a more abstracted approach to database access.
+
+Manual Mapping: Unlike some other ORM frameworks, MyBatis requires explicit mapping between database tables and Java objects. Developers need to write XML or annotation-based mapping configurations, which can be more time-consuming and error-prone.
+
+Maintenance of SQL Queries: As SQL queries are written directly, any changes in database schema or query logic require corresponding changes in the SQL statements within the codebase. This maintenance can be challenging, particularly in larger projects with complex SQL queries.
+
+Limited Automatic Query Generation: MyBatis provides limited support for automatic query generation compared to some other ORM frameworks. Developers need to write SQL statements manually, even for common CRUD operations, which may increase development time.
+
+Overall, MyBatis offers flexibility, control, and performance optimizations for database access in Java applications. However, it requires a solid understanding of SQL and involves manual configuration and maintenance of SQL queries. It may be a good fit for projects where fine-grained control over SQL and database operations is a priority.
+MyBatis 是一種流行的基於 Java 的持久性框架，它簡化了關係數據庫與應用程序的集成。 它有幾個優點，也有一些限制：
+
+MyBatis 的優點：
+
+SQL 控制：MyBatis 提供了對 SQL 查詢的顯式控制。 開發者可以直接編寫SQL語句，實現對數據庫操作的細粒度控制和優化。 這種靈活性在處理複雜或定制的數據庫查詢時特別有用。
+
+輕量靈活：MyBatis 是輕量級的，不會對應用程序性能造成沉重的開銷。 它提供了將 SQL 查詢映射到 Java 對象的靈活性，允許開發人員根據特定要求自定義映射。
+
+動態 SQL：MyBatis 支持動態 SQL，可以在運行時構造 SQL 語句。 動態 SQL 允許條件語句、循環和動態字段選擇，從而更容易構建靈活且適應性強的查詢。
+
+抽象級別：MyBatis 在 SQL 和 Java 對象之間提供了一個平衡的抽象級別。 它允許開發人員使用原始 SQL 和本機數據庫功能，同時仍然為更簡單的 CRUD 操作提供對象關係映射功能。
+
+與現有代碼庫集成：MyBatis 可以很容易地與現有的 Java 代碼庫集成。 支持與Spring等框架的無縫集成，可以平滑集成到企業應用中。
+
+MyBatis 的局限性：
+
+更陡峭的學習曲線：MyBatis 要求開發人員對 SQL 和關係數據庫有紮實的理解。 對於那些不熟悉 SQL 或更喜歡更抽象的數據庫訪問方法的人來說，它的學習曲線可能更陡峭。
+
+手動映射：與其他一些 ORM 框架不同，MyBatis 需要在數據庫表和 Java 對象之間進行顯式映射。 開發人員需要編寫 XML 或基於註釋的映射配置，這可能更耗時且更容易出錯。
+
+SQL 查詢的維護：由於 SQL 查詢是直接編寫的，因此數據庫模式或查詢邏輯的任何更改都需要在代碼庫中對 SQL 語句進行相應的更改。 這種維護可能具有挑戰性，尤其是在具有復雜 SQL 查詢的大型項目中。
+
+有限的自動查詢生成：與其他一些 ORM 框架相比，MyBatis 對自動查詢生成的支持有限。 開發人員需要手動編寫 SQL 語句，即使是常見的 CRUD 操作，這可能會增加開發時間。
+
+總的來說，MyBatis 為 Java 應用程序中的數據庫訪問提供了靈活性、控制和性能優化。 但是，它需要對 SQL 有紮實的了解，並且涉及到 SQL 查詢的手動配置和維護。 它可能非常適合優先考慮對 SQL 和數據庫操作進行細粒度控制的項目。
+
+
+## ArrayList vs. LinkedList
+
+ArrayList and LinkedList are both implementations of the List interface in Java. They have different characteristics in terms of performance and usage scenarios.
+
+ArrayList:
+
+Underlying Data Structure: ArrayList is implemented as a dynamic array. It internally uses an array to store elements and dynamically resizes the array as needed.
+Random Access: ArrayList provides efficient random access to elements. It allows accessing elements directly by their index in constant time (O(1)).
+Insertion and Deletion: Insertion and deletion operations in ArrayList can be slower, especially when performed at the beginning or in the middle of the list. As elements need to be shifted to accommodate the changes, these operations have a time complexity of O(n), where n is the number of elements.
+Memory Usage: ArrayList typically consumes more memory than LinkedList because it needs to allocate contiguous memory blocks to store elements.
+Usage: ArrayList is suitable when you frequently need to access elements by their index, perform bulk operations, or iterate over the list.
+LinkedList:
+
+Underlying Data Structure: LinkedList is implemented as a doubly-linked list. Each element in the list is stored as a node that contains a reference to the previous and next nodes.
+Sequential Access: LinkedList provides efficient sequential access, allowing traversal of elements in the forward and backward directions. However, random access is slower as elements need to be traversed from the beginning of the list.
+Insertion and Deletion: LinkedList excels in insertion and deletion operations, especially when performed at the beginning or in the middle of the list. These operations can be done in constant time (O(1)) as they only require updating the references of adjacent nodes.
+Memory Usage: LinkedList requires additional memory to store the node references, making it consume more memory compared to ArrayList.
+Usage: LinkedList is suitable when you frequently need to perform insertion and deletion operations, especially near the beginning or middle of the list. It is also useful when you need to implement a queue or stack data structure.
+In summary, ArrayList is efficient for random access and bulk operations, while LinkedList is better for frequent insertion and deletion operations. The choice between ArrayList and LinkedList depends on the specific requirements of your application and the types of operations you will perform on the list.
+
+2,448 / 5,000
+Translation results
+Translation result
+ArrayList 和 LinkedList 都是 Java 中 List 接口的實現。 它們在性能和使用場景方面具有不同的特點。
+
+數組列表：
+
+底層數據結構：ArrayList 被實現為一個動態數組。 它在內部使用數組來存儲元素並根據需要動態調整數組的大小。
+隨機訪問：ArrayList 提供了對元素的高效隨機訪問。 它允許在恆定時間內通過索引直接訪問元素 (O(1))。
+插入和刪除：ArrayList 中的插入和刪除操作可能比較慢，尤其是在列表的開頭或中間執行時。 由於需要移動元素以適應變化，這些操作的時間複雜度為 O(n)，其中 n 是元素的數量。
+內存使用：ArrayList 通常比 LinkedList 消耗更多的內存，因為它需要分配連續的內存塊來存儲元素。
+用法：ArrayList 適用於經常需要按索引訪問元素、執行批量操作或遍歷列表的情況。
+鍊錶：
+
+底層數據結構：LinkedList 實現為雙向鍊錶。 列表中的每個元素都存儲為一個節點，該節點包含對上一個和下一個節點的引用。
+順序訪問：LinkedList 提供高效的順序訪問，允許向前和向後遍曆元素。 但是，隨機訪問速度較慢，因為需要從列表的開頭遍曆元素。
+插入和刪除：LinkedList 擅長插入和刪除操作，尤其是在列表的開頭或中間執行時。 這些操作可以在恆定時間 (O(1)) 內完成，因為它們只需要更新相鄰節點的引用。
+內存使用：LinkedList 需要額外的內存來存儲節點引用，這使得它比 ArrayList 消耗更多的內存。
+用法：LinkedList適用於經常需要進行插入和刪除操作的情況，尤其是在列表的開頭或中間附近。 當您需要實現隊列或堆棧數據結構時，它也很有用。
+綜上所述，ArrayList 對於隨機訪問和批量操作效率更高，而 LinkedList 對於頻繁的插入和刪除操作更好。 ArrayList 和 LinkedList 之間的選擇取決於您的應用程序的具體要求以及您將對列表執行的操作類型。
+
+## Class vs. Object
+Class and object are fundamental concepts in object-oriented programming (OOP), and they represent different aspects of a software system.
+
+Class:
+
+Definition: A class is a blueprint or template that describes the properties (attributes) and behaviors (methods) that objects of that class will have. It defines the structure and behavior of objects of a particular type.
+Abstraction: A class is an abstraction of real-world entities or concepts. It encapsulates data and methods that represent the characteristics and actions associated with those entities or concepts.
+Design-time Concept: Classes are created at design-time and serve as a blueprint for creating objects. They define the common attributes and behaviors that objects of that class will possess.
+Template for Objects: A class provides a structure for creating objects. It specifies the attributes that objects will have and the methods they can perform.
+Object:
+
+Instance of a Class: An object is a specific instance or occurrence of a class. It is created based on the blueprint defined by the class.
+Runtime Entity: Objects exist at runtime when the program is executed. They represent actual data and have state (attribute values) and behavior (methods that can be invoked).
+Identity: Each object has a unique identity that distinguishes it from other objects of the same class. Objects can have different attribute values, even though they belong to the same class.
+Interact and Communicate: Objects can interact with each other by invoking methods and accessing attributes. They can communicate and exchange data through method calls and message passing.
+In summary, a class is a blueprint or template that defines the structure and behavior of objects, while an object is a specific instance of a class with its own unique state and identity. Classes are created at design-time and serve as templates, while objects exist at runtime and represent actual entities or instances of those templates.
+
+
+
+
+
+類和對像是面向對象編程 (OOP) 中的基本概念，它們代表軟件系統的不同方面。
+
+班級：
+
+定義：類是描述該類的對象將具有的特性（屬性）和行為（方法）的藍圖或模板。 它定義了特定類型對象的結構和行為。
+抽象：類是現實世界實體或概念的抽象。 它封裝了表示與這些實體或概念相關聯的特徵和操作的數據和方法。
+設計時概念：類是在設計時創建的，並作為創建對象的藍圖。 它們定義了該類的對象將擁有的共同屬性和行為。
+對像模板：類提供用於創建對象的結構。 它指定對象將具有的屬性以及它們可以執行的方法。
+目的：
+
+類的實例：對像是類的特定實例或事件。 它是根據類定義的藍圖創建的。
+運行時實體：對像在程序執行時存在於運行時。 它們代表實際數據並具有狀態（屬性值）和行為（可以調用的方法）。
+身份：每個對像都有一個獨特的身份，以區別於同一類的其他對象。 對象可以有不同的屬性值，即使它們屬於同一個類。
+交互和通信：對象可以通過調用方法和訪問屬性來相互交互。 它們可以通過方法調用和消息傳遞來通信和交換數據。
+總之，類是定義對象的結構和行為的藍圖或模板，而對像是類的特定實例，具有自己獨特的狀態和標識。 類在設計時創建並用作模板，而對像在運行時存在並代表這些模板的實際實體或實例。
+
+
+## static keyword
+
+The "static" keyword in Java is used to define a member (variable or method) that belongs to the class itself, rather than to instances (objects) of the class. Here are some key points about the "static" keyword:
+
+Static Variables: When a variable is declared as static, it is shared among all instances of the class. Only one copy of the static variable exists in memory, regardless of how many objects are created. Static variables are commonly used for values that are shared across instances, such as constants or counters.
+
+Static Methods: Static methods belong to the class rather than to individual objects. They can be invoked directly on the class itself, without creating an instance of the class. Static methods cannot access non-static (instance) variables or methods directly, as they do not have access to any specific instance of the class.
+
+Class-level Scope: Static members have class-level scope and can be accessed using the class name followed by the member name, without needing an instance of the class. For example, if a class has a static variable called "count," it can be accessed as "ClassName.count" without creating an object of the class.
+
+Initialization: Static variables and static blocks are initialized when the class is loaded into memory, before any objects are created. Static variables can be assigned values directly, or in a static initialization block, which is a block of code that runs only once when the class is loaded.
+
+Utility Methods and Constants: Static methods are commonly used for utility methods or helper functions that do not rely on any specific instance state. Static variables can be used to define constants that are shared across instances of the class.
+
+Thread Safety: Static variables and methods are shared among multiple threads. If multiple threads modify a static variable concurrently, it can lead to race conditions or inconsistent behavior. Proper synchronization techniques, such as using the "synchronized" keyword, may be necessary to ensure thread safety.
+
+It's important to use the "static" keyword judiciously and be aware of its implications. Overuse of static members can lead to tightly coupled code and make testing and maintenance more challenging. Static members should be used when the shared behavior or state is genuinely applicable to all instances of the class.
+
+Java中的“static”關鍵字用於定義屬於類本身的成員（變量或方法），而不是屬於類的實例（對象）。 以下是關於“static”關鍵字的一些要點：
+
+靜態變量：當一個變量被聲明為靜態時，它在類的所有實例之間共享。 無論創建多少個對象，內存中只存在一個靜態變量的副本。 靜態變量通常用於跨實例共享的值，例如常量或計數器。
+
+靜態方法：靜態方法屬於類而不屬於單個對象。 它們可以直接在類本身上調用，而無需創建類的實例。 靜態方法無法直接訪問非靜態（實例）變量或方法，因為它們無權訪問該類的任何特定實例。
+
+類級作用域：靜態成員具有類級作用域，可以使用類名後跟成員名來訪問，而不需要類的實例。 例如，如果一個類有一個名為“count”的靜態變量，它可以作為“ClassName.count”訪問，而無需創建該類的對象。
+
+初始化：靜態變量和靜態塊在類加載到內存時初始化，然後再創建任何對象。 靜態變量可以直接賦值，也可以在靜態初始化塊中賦值，靜態初始化塊是在加載類時只運行一次的代碼塊。
+
+實用方法和常量：靜態方法通常用於不依賴於任何特定實例狀態的實用方法或輔助函數。 靜態變量可用於定義在類的實例之間共享的常量。
+
+線程安全：靜態變量和方法在多個線程之間共享。 如果多個線程同時修改靜態變量，可能會導致競爭條件或不一致的行為。 可能需要適當的同步技術，例如使用“synchronized”關鍵字，以確保線程安全。
+
+明智地使用“static”關鍵字並了解其含義很重要。 過度使用靜態成員會導致代碼緊耦合，並使測試和維護更具挑戰性。 當共享行為或狀態真正適用於類的所有實例時，應使用靜態成員。
+
+## overload vs. override
+
+Overload and override are two important concepts in Java related to method declarations and inheritance. They have distinct meanings and purposes:
+
+Overload:
+
+Definition: Overloading refers to the ability to define multiple methods in the same class with the same name but different parameter lists.
+Method Signature: Overloaded methods must have different parameter types, different number of parameters, or both. The return type or access modifier alone is not sufficient to distinguish overloaded methods.
+Compile-Time Polymorphism: Overloading is an example of compile-time polymorphism (also known as static polymorphism or early binding). The appropriate method to invoke is determined by the compiler based on the arguments provided at the call site.
+Usage: Overloading is used when you want to provide different ways to invoke a method with different parameter combinations. It improves code readability and flexibility by allowing methods with similar functionality to have distinct names.
+Override:
+
+Definition: Overriding occurs when a subclass provides its own implementation of a method that is already defined in its superclass.
+Method Signature: The overriding method in the subclass must have the same name, parameter types, and return type (or a subtype) as the method in the superclass.
+Runtime Polymorphism: Overriding is an example of runtime polymorphism (also known as dynamic polymorphism or late binding). The specific implementation of the method to execute is determined at runtime based on the actual type of the object.
+Usage: Override is used to modify the behavior of a method in a subclass to suit the specific needs of the subclass. It allows for specialization and customization of methods inherited from the superclass.
+Key Differences:
+
+Overload is related to a single class, allowing multiple methods with the same name but different parameters. Override is specific to inheritance, where a subclass provides its own implementation of a method inherited from the superclass.
+Overload is resolved at compile-time based on the method call and its parameters. Override is resolved at runtime based on the actual object type.
+Overload is not limited to the method in the superclass, while override is specific to methods defined in the superclass that are intended to be overridden.
+Overload does not change the original behavior of a method. Override modifies the behavior of a method inherited from the superclass in the subclass.
+In summary, overload refers to having multiple methods with the same name but different parameters in a class, providing flexibility and readability. Override refers to providing a new implementation of a method in a subclass, allowing customization and specialization of inherited behavior.
+
+```
+class Animal {
+    public void makeSound() {
+        System.out.println("Animal makes a sound");
+    }
+    
+    public void makeSound(String sound) {
+        System.out.println("Animal makes the sound: " + sound);
+    }
+}
+
+class Dog extends Animal {
+    @Override
+    public void makeSound() {
+        System.out.println("Dog barks");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Animal animal = new Animal();
+        animal.makeSound();                // Output: Animal makes a sound
+        animal.makeSound("Meow");          // Output: Animal makes the sound: Meow
+        
+        Dog dog = new Dog();
+        dog.makeSound();                   // Output: Dog barks
+        dog.makeSound("Woof");             // Output: Animal makes the sound: Woof (inherited method)
+    }
+}
+```
+In this example, we have a base class Animal with two overloaded makeSound methods. The first makeSound method takes no arguments and simply prints a generic sound message. The second makeSound method takes a sound parameter and prints the specific sound provided.
+
+The Dog class extends Animal and overrides the makeSound method. The overridden method in the Dog class provides a different implementation that specifically outputs "Dog barks" when invoked.
+
+In the main method, we create instances of Animal and Dog and invoke the makeSound methods on them. As a result, we see that the makeSound method is overloaded in the Animal class, allowing us to invoke it with or without a sound parameter. The overridden makeSound method in the Dog class provides a different implementation and is invoked when calling makeSound on a Dog object.
+
+
+
+
+
+重載和覆蓋是Java中與方法聲明和繼承相關的兩個重要概念。 它們具有不同的含義和目的：
+
+超載：
+
+定義：重載是指能夠在同一個類中定義多個同名但參數列表不同的方法。
+方法簽名：重載方法必須具有不同的參數類型和/或不同的參數數量。 單獨的返回類型或訪問修飾符不足以區分重載方法。
+編譯時多態性：重載是編譯時多態性（也稱為靜態多態性或早期綁定）的一個示例。 調用的適當方法由編譯器根據調用站點提供的參數確定。
+用法：當您想提供不同的方式來調用具有不同參數組合的方法時，可以使用重載。 它通過允許具有相似功能的方法使用不同的名稱來提高代碼的可讀性和靈活性。
+覆蓋：
+
+定義：當子類提供自己的已在其超類中定義的方法的實現時，就會發生覆蓋。
+方法簽名：子類中的覆蓋方法必須與超類中的方法具有相同的名稱、參數類型和返回類型（或子類型）。
+運行時多態性：覆蓋是運行時多態性（也稱為動態多態性或後期綁定）的一個示例。 要執行的方法的具體實現是在運行時根據對象的實際類型確定的。
+用法：Override 用於修改子類中方法的行為，以適應子類的特定需要。 它允許對從超類繼承的方法進行專門化和定制。
+主要區別：
+
+重載與單個類相關，允許多個同名不同參數的方法。 Override 特定於繼承，其中子類提供自己的從超類繼承的方法的實現。
+重載是在編譯時根據方法調用及其參數解決的。 覆蓋是在運行時根據實際對像類型解析的。
+重載不限於超類中的方法，而覆蓋特定於超類中定義的旨在被覆蓋的方法。
+重載不會改變方法的原始行為。 Override 修改子類中從超類繼承的方法的行為。
+概括地說，重載是指在一個類中有多個同名但參數不同的方法，提供靈活性和可讀性。 覆蓋是指在子類中提供方法的新實現，允許對繼承的行為進行定制和專門化。
+
+在這個例子中，我們有一個基類 Animal 和兩個重載的 makeSound 方法。 第一個 makeSound 方法沒有參數，只是打印一條通用的聲音消息。 第二個 makeSound 方法採用聲音參數並打印提供的特定聲音。
+
+Dog 類擴展了 Animal 並覆蓋了 makeSound 方法。 Dog 類中的重寫方法提供了一個不同的實現，它在調用時專門輸出“Dog barks”。
+
+在 main 方法中，我們創建了 Animal 和 Dog 的實例並調用它們的 makeSound 方法。 結果，我們看到 makeSound 方法在 Animal 類中被重載，允許我們使用或不使用聲音參數來調用它。 Dog 類中重寫的 makeSound 方法提供了不同的實現，並在對 Dog 對象調用 makeSound 時調用。
