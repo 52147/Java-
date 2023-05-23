@@ -536,3 +536,180 @@ In the main method, we create instances of Animal and Dog and invoke the makeSou
 Dog 類擴展了 Animal 並覆蓋了 makeSound 方法。 Dog 類中的重寫方法提供了一個不同的實現，它在調用時專門輸出“Dog barks”。
 
 在 main 方法中，我們創建了 Animal 和 Dog 的實例並調用它們的 makeSound 方法。 結果，我們看到 makeSound 方法在 Animal 類中被重載，允許我們使用或不使用聲音參數來調用它。 Dog 類中重寫的 makeSound 方法提供了不同的實現，並在對 Dog 對象調用 makeSound 時調用。
+
+
+## Exception
+Exceptions in Java are a mechanism to handle exceptional or error conditions that may occur during program execution. They help in detecting and managing errors, providing a structured way to handle abnormal situations. Java has a built-in exception handling framework, with a hierarchy of exception classes.
+
+Here are some key points about exceptions in Java:
+
+Exception Hierarchy: Exceptions in Java are organized in a class hierarchy, with the root class being java.lang.Throwable. This class has two main subclasses: java.lang.Error, which represents severe system errors, and java.lang.Exception, which is further divided into checked exceptions and unchecked exceptions.
+
+Checked Exceptions: Checked exceptions are exceptions that must be declared in the method signature or handled explicitly using a try-catch block. Examples include IOException and SQLException. The compiler enforces handling or declaring checked exceptions to ensure that potential errors are acknowledged and managed.
+
+Unchecked Exceptions: Unchecked exceptions, also known as runtime exceptions, do not require explicit handling or declaration. They are subclasses of RuntimeException and are usually caused by programming errors, such as dividing by zero (ArithmeticException) or accessing an array out of bounds (ArrayIndexOutOfBoundsException).
+
+try-catch Block: The try-catch block is used to handle exceptions. The code that may throw an exception is enclosed within the try block, and the possible exception handling logic is written in the catch block. Multiple catch blocks can be used to handle different types of exceptions.
+
+finally Block: The finally block is optional and is used to specify code that should be executed regardless of whether an exception is thrown or not. It is commonly used to release resources or perform cleanup operations. The code in the finally block is executed even if an exception is thrown and not caught.
+
+throw Keyword: The throw keyword is used to explicitly throw an exception. It allows you to create and throw custom exceptions or propagate exceptions that were caught but should be handled by an outer exception handler.
+
+Exception Propagation: Exceptions can be propagated up the call stack if they are not caught and handled locally. When an exception is not caught, the control is transferred to the calling method, and the process continues until an appropriate exception handler is found or until the program terminates if no handler is present.
+
+By using exception handling mechanisms in Java, you can gracefully handle errors, prevent program crashes, and provide meaningful feedback to users or log errors for troubleshooting purposes.
+
+Java 中的異常是一種處理程序執行期間可能發生的異常或錯誤情況的機制。 它們有助於檢測和管理錯誤，提供一種結構化的方式來處理異常情況。 Java 有一個內置的異常處理框架，具有異常類的層次結構。
+
+以下是有關 Java 異常的一些要點：
+
+異常層次結構：Java 中的異常是按類層次結構組織的，根類是 java.lang.Throwable。 這個類有兩個主要的子類：java.lang.Error，代表嚴重的系統錯誤，java.lang.Exception，又分為checked exception和unchecked exception。
+
+檢查異常：檢查異常是必須在方法簽名中聲明或使用 try-catch 塊顯式處理的異常。 示例包括 IOException 和 SQLException。 編譯器強制處理或聲明已檢查的異常，以確保潛在的錯誤得到確認和管理。
+
+未經檢查的異常：未經檢查的異常，也稱為運行時異常，不需要顯式處理或聲明。 它們是 RuntimeException 的子類，通常由編程錯誤引起，例如被零除 (ArithmeticException) 或訪問數組越界 (ArrayIndexOutOfBoundsException)。
+
+try-catch 塊：try-catch 塊用於處理異常。 可能拋出異常的代碼封裝在try塊中，可能的異常處理邏輯寫在catch塊中。 多個 catch 塊可用於處理不同類型的異常。
+
+finally 塊：finally 塊是可選的，用於指定無論是否拋出異常都應該執行的代碼。 它通常用於釋放資源或執行清理操作。 即使拋出異常但未捕獲，finally 塊中的代碼也會執行。
+
+throw 關鍵字：throw 關鍵字用於顯式拋出異常。 它允許您創建和拋出自定義異常或傳播已捕獲但應由外部異常處理程序處理的異常。
+
+異常傳播：如果異常未在本地捕獲和處理，則異常可以向上傳播到調用堆棧。 如果未捕獲到異常，則控制權將轉移到調用方法，並且該過程將繼續，直到找到合適的異常處理程序，或者如果沒有處理程序，則程序終止。
+
+通過使用 Java 中的異常處理機制，您可以優雅地處理錯誤，防止程序崩潰，並向用戶提供有意義的反饋或記錄錯誤以進行故障排除。
+## Concurrency
+Concurrency in programming refers to the ability of a program to execute multiple tasks simultaneously or in overlapping time intervals. It allows for the effective utilization of system resources and can improve the performance and responsiveness of applications. Java provides several features and APIs for concurrent programming.
+
+Here are some key points about concurrency in Java:
+
+Threads: A thread is the basic unit of concurrency in Java. It represents an independent sequence of instructions that can be scheduled and executed concurrently. Java allows creating and managing threads using the Thread class or by implementing the Runnable interface.
+
+Thread Synchronization: When multiple threads access shared resources concurrently, synchronization is needed to maintain data consistency and prevent race conditions. Java provides synchronization mechanisms like the synchronized keyword and Lock objects to control access to shared resources.
+
+Thread Safety: Thread safety refers to the ability of a program or component to function correctly and produce consistent results in a multithreaded environment. Writing thread-safe code involves using synchronization techniques, using atomic operations, and designing data structures and algorithms with concurrency in mind.
+
+Thread Communication: Threads often need to communicate and synchronize their activities. Java provides inter-thread communication mechanisms such as wait(), notify(), and notifyAll() methods, which are used in conjunction with synchronized blocks to coordinate the execution of threads.
+
+Concurrency Utilities: Java provides a rich set of concurrency utilities in the java.util.concurrent package. This includes thread pools, concurrent collections (e.g., ConcurrentHashMap), atomic variables, barriers, semaphores, and other high-level constructs to simplify concurrent programming.
+
+Executors Framework: The Executors framework provides a higher-level abstraction for managing thread execution. It offers thread pool management, task scheduling, and asynchronous execution capabilities through interfaces like Executor, ExecutorService, and ScheduledExecutorService.
+
+Parallel Programming: Java also supports parallel programming with constructs like the java.util.stream API and the parallelStream() method, which leverage multicore processors to process data concurrently.
+
+Java Memory Model: The Java Memory Model (JMM) defines the rules and guarantees for memory visibility and synchronization in multithreaded programs. It ensures that changes made by one thread are visible to other threads in a consistent and predictable manner.
+
+Concurrency in Java enables developers to write efficient and responsive applications that can take advantage of modern hardware architectures. However, concurrent programming introduces challenges such as thread safety, synchronization, and potential issues like deadlock and livelock, which need to be carefully managed and addressed.
+
+
+編程中的並發性是指程序同時或在重疊的時間間隔內執行多個任務的能力。 它允許有效利用系統資源，並可以提高應用程序的性能和響應能力。 Java 為並發編程提供了多種特性和 API。
+
+以下是 Java 中有關並發的一些要點：
+
+線程：線程是Java中並發的基本單位。 它表示可以同時調度和執行的獨立指令序列。 Java 允許使用 Thread 類或通過實現 Runnable 接口來創建和管理線程。
+
+線程同步：當多個線程並發訪問共享資源時，需要同步來保持數據的一致性並防止競爭條件。 Java 提供同步機制，如 synchronized 關鍵字和 Lock 對象來控制對共享資源的訪問。
+
+線程安全：線程安全是指程序或組件在多線程環境中正確運行並產生一致結果的能力。 編寫線程安全代碼涉及使用同步技術、使用原子操作以及設計數據結構和算法時考慮並發性。
+
+線程通信：線程經常需要通信和同步它們的活動。 Java提供了wait()、notify()、notifyAll()方法等線程間通信機制，與synchronized塊配合使用，協調線程的執行。
+
+並發實用程序：Java 在 java.util.concurrent 包中提供了一組豐富的並發實用程序。 這包括線程池、並發集合（例如 ConcurrentHashMap）、原子變量、屏障、信號量和其他用於簡化並發編程的高級結構。
+
+Executors Framework：Executors 框架為管理線程執行提供了更高級別的抽象。 它通過 Executor、ExecutorService 和 ScheduledExecutorService 等接口提供線程池管理、任務調度和異步執行功能。
+
+並行編程：Java 還支持使用 java.util.stream API 和 parallelStream() 方法等結構進行並行編程，這些結構利用多核處理器並發處理數據。
+
+Java 內存模型：Java 內存模型 (JMM) 定義了多線程程序中內存可見性和同步的規則和保證。 它確保一個線程所做的更改以一致且可預測的方式對其他線程可見。
+
+Java 中的並發性使開發人員能夠編寫高效且響應迅速的應用程序，這些應用程序可以利用現代硬件架構。 然而，並發編程帶來了線程安全、同步等挑戰，以及死鎖和活鎖等潛在問題，需要謹慎管理和解決。
+
+## Java 8
+
+Java 8 is a major release of the Java programming language that was introduced in March 2014. It introduced several significant features and enhancements to the language, including:
+
+Lambda Expressions: Java 8 introduced lambda expressions, which provide a concise syntax for writing anonymous functions. Lambda expressions enable functional programming paradigms and make it easier to work with collections and streams.
+
+Stream API: The Stream API in Java 8 allows for functional-style processing of collections and sequences of elements. It provides a set of operations, such as filter, map, reduce, and collect, to perform data manipulation and transformation efficiently.
+
+Default Methods: Default methods, also known as defender methods or virtual extension methods, allow interfaces to provide implementations for methods. This feature enables backward compatibility when adding new methods to interfaces without breaking existing implementations.
+
+Optional Class: The Optional class was introduced to handle the absence of a value in a more expressive way. It helps avoid NullPointerExceptions by providing methods to safely handle potentially null values.
+
+Date and Time API: Java 8 introduced a new Date and Time API (java.time package) that provides a more comprehensive and intuitive way to work with dates, times, time zones, and durations. This new API addresses the limitations and complexities of the old java.util.Date and java.util.Calendar classes.
+
+Functional Interfaces: Java 8 introduced a set of functional interfaces in the java.util.function package, such as Predicate, Function, Consumer, and Supplier. These interfaces enable the use of lambda expressions and facilitate functional programming concepts.
+
+Method References: Method references allow referring to methods or constructors using their names. They provide a shorthand syntax for lambda expressions when the function being passed is a direct method or constructor invocation.
+
+Parallel and Asynchronous Programming: Java 8 added support for parallel processing and asynchronous programming with the CompletableFuture class. It allows for easy creation of asynchronous tasks, chaining of dependent tasks, and handling of completion or exception scenarios.
+
+These are just some of the notable features introduced in Java 8. The release brought significant improvements to the language, enhancing productivity, performance, and expressiveness of Java code. It laid the foundation for subsequent versions of Java and influenced the evolution of the language in subsequent releases.
+
+
+
+
+Java 8 是 Java 編程語言的主要版本，於 2014 年 3 月推出。它引入了該語言的幾個重要功能和增強功能，包括：
+
+Lambda 表達式：Java 8 引入了 lambda 表達式，它為編寫匿名函數提供了簡潔的語法。 Lambda 表達式支持函數式編程範例，並使使用集合和流變得更加容易。
+
+Stream API：Java 8 中的 Stream API 允許對元素的集合和序列進行函數式處理。 它提供了一組操作，例如 filter、map、reduce 和 collect，以高效地執行數據操作和轉換。
+
+默認方法：默認方法，也稱為防禦方法或虛擬擴展方法，允許接口為方法提供實現。 在不破壞現有實現的情況下向接口添加新方法時，此功能可實現向後兼容性。
+
+Optional 類：Optional 類的引入是為了以更具表現力的方式處理值缺失的情況。 它通過提供安全處理潛在空值的方法來幫助避免 NullPointerExceptions。
+
+日期和時間 API：Java 8 引入了一個新的日期和時間 API（java.time 包），它提供了一種更全面、更直觀的方式來處理日期、時間、時區和持續時間。 這個新 API 解決了舊 java.util.Date 和 java.util.Calendar 類的局限性和復雜性。
+
+函數式接口：Java 8 在 java.util.function 包中引入了一組函數式接口，例如 Predicate、Function、Consumer 和 Supplier。 這些接口支持使用 lambda 表達式並促進函數式編程概念。
+
+方法引用：方法引用允許使用它們的名稱來引用方法或構造函數。 當傳遞的函數是直接方法或構造函數調用時，它們為 lambda 表達式提供簡寫語法。
+
+並行和異步編程：Java 8 通過 CompletableFuture 類添加了對並行處理和異步編程的支持。 它允許輕鬆創建異步任務、鏈接相關任務以及處理完成或異常場景。
+
+這些只是 Java 8 中引入的一些顯著特性。該版本對該語言進行了重大改進，提高了 Java 代碼的生產力、性能和表現力。 它為 Java 的後續版本奠定了基礎，並影響了該語言在後續版本中的演變。
+
+## String
+
+In Java, the String class is a fundamental class that represents a sequence of characters. It is widely used for storing and manipulating textual data in Java programs. Here are some key points about the String class:
+
+Immutable: Strings in Java are immutable, which means their values cannot be changed after they are created. When you perform operations on strings, such as concatenation or substring, a new string object is created rather than modifying the original string.
+
+String Literal: String literals are created by enclosing characters within double quotes. For example: "Hello, World!". Java provides automatic string pooling for string literals, which means that multiple string literals with the same value refer to the same object in memory.
+
+String Object Creation: Besides string literals, you can create String objects using the new keyword. For example: String str = new String("Hello");. However, it is more common and efficient to use string literals directly.
+
+String Concatenation: You can concatenate strings using the + operator or the concat() method. String concatenation results in the creation of a new string object that combines the contents of the concatenated strings.
+
+String Methods: The String class provides numerous methods for manipulating and analyzing strings. Some commonly used methods include length(), charAt(), substring(), indexOf(), split(), toLowerCase(), toUpperCase(), and replace(), among others.
+
+String Comparison: To compare strings for equality, you should use the equals() method rather than the == operator. The equals() method compares the content of strings, while the == operator checks if two string references point to the same object in memory.
+
+String Formatting: Java provides the String.format() method and the printf() method (from System.out), which allow you to format strings using placeholders and format specifiers.
+
+StringBuilder and StringBuffer: When you need to perform frequent string manipulations (e.g., concatenation in a loop), it is recommended to use the StringBuilder class (or StringBuffer for thread-safe operations). StringBuilder provides mutable string operations and is more efficient than repeatedly creating new String objects.
+
+String objects are extensively used in Java applications for various purposes, such as storing user input, representing file paths, constructing messages, and many more. Understanding the characteristics and methods of the String class is essential for effective string manipulation and handling in Java programs.
+
+
+
+
+在 Java 中，String 類是表示字符序列的基礎類。 它廣泛用於在 Java 程序中存儲和操作文本數據。 以下是有關 String 類的一些要點：
+
+不可變的：Java 中的字符串是不可變的，這意味著它們的值在創建後不能更改。 當您對字符串執行操作（例如連接或子字符串）時，會創建一個新的字符串對象，而不是修改原始字符串。
+
+字符串文字：字符串文字是通過將字符括在雙引號中創建的。 例如：“你好，世界！”。 Java 為字符串字面量提供了自動字符串池化，這意味著具有相同值的多個字符串字面量引用內存中的同一個對象。
+
+字符串對象創建：除了字符串文字，您還可以使用 new 關鍵字創建字符串對象。 例如：String str = new String("Hello");。 然而，直接使用字符串字面值更為常見和高效。
+
+字符串連接：您可以使用 + 運算符或 concat() 方法連接字符串。 字符串連接會創建一個新的字符串對象，該對象組合了連接後的字符串的內容。
+
+String 方法：String 類提供了許多用於操作和分析字符串的方法。 一些常用的方法包括 length()、charAt()、substring()、indexOf()、split()、toLowerCase()、toUpperCase() 和 replace() 等。
+
+字符串比較：要比較字符串是否相等，您應該使用 equals() 方法而不是 == 運算符。 equals() 方法比較字符串的內容，而 == 運算符檢查兩個字符串引用是否指向內存中的同一個對象。
+
+字符串格式化：Java 提供了 String.format() 方法和 printf() 方法（來自 System.out），它們允許您使用佔位符和格式說明符來格式化字符串。
+
+StringBuilder 和 StringBuffer：當您需要執行頻繁的字符串操作（例如，在循環中連接）時，建議使用 StringBuilder 類（或 StringBuffer 用於線程安全操作）。 StringBuilder 提供可變的字符串操作，比重複創建新的 String 對象更高效。
+
+字符串對像在 Java 應用程序中廣泛用於各種目的，例如存儲用戶輸入、表示文件路徑、構建消息等等。 了解 String 類的特徵和方法對於在 Java 程序中進行有效的字符串操作和處理至關重要。
