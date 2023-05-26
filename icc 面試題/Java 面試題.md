@@ -713,3 +713,69 @@ String 方法：String 類提供了許多用於操作和分析字符串的方法
 StringBuilder 和 StringBuffer：當您需要執行頻繁的字符串操作（例如，在循環中連接）時，建議使用 StringBuilder 類（或 StringBuffer 用於線程安全操作）。 StringBuilder 提供可變的字符串操作，比重複創建新的 String 對象更高效。
 
 字符串對像在 Java 應用程序中廣泛用於各種目的，例如存儲用戶輸入、表示文件路徑、構建消息等等。 了解 String 類的特徵和方法對於在 Java 程序中進行有效的字符串操作和處理至關重要。
+
+## Interface vs Abstract Class
+In object-oriented programming, an abstract class and an interface are two concepts used to achieve polymorphism and encapsulation. They have some similarities but also some key differences.
+
+Here are the main differences between an abstract class and an interface:
+
+Definition:
+
+Abstract class: An abstract class can include method implementations and properties. It is defined using the "abstract" keyword and can contain both regular methods and abstract methods. An abstract method is a method without an implementation and must be implemented in the subclass. An abstract class itself cannot be instantiated; it can only be inherited.
+Interface: An interface can only contain abstract methods, default methods, and static constants. It is defined using the "interface" keyword. All methods in an interface are abstract, without an implementation. A class can implement one or more interfaces, and it must implement all the methods defined in the interface.
+Inheritance and Implementation:
+
+Abstract class: A subclass inherits an abstract class and can inherit its properties and methods by extending the abstract class. The subclass can extend the functionality of the abstract class and override its methods. A class can only inherit from one abstract class (single inheritance).
+Interface: A class indicates its abilities by implementing an interface. A class can implement multiple interfaces (multiple implementation). A class implementing an interface must implement all the methods defined in the interface.
+Constructors:
+
+Abstract class: An abstract class can have constructors, and they can be inherited and invoked by subclasses.
+Interface: An interface cannot have constructors. It can only define methods and constants.
+Access Modifiers:
+
+Abstract class: An abstract class can use different access modifiers (public, protected, default, private) to define the visibility of its members.
+Interface: Methods in an interface are public by default, and member variables are public, static, and final by default.
+Use Cases:
+
+Abstract class: It is suitable for establishing an inheritance relationship among classes that share common characteristics. An abstract class can provide some common implementations, and subclasses can extend upon them.
+Interface: It is suitable for describing behavioral contracts among classes. An interface defines a set of methods, and a class implementing the interface must provide concrete implementations of those methods.
+In summary, an abstract class is more suitable for inheritance relationships among classes with similar behavior and properties, while an interface is more suitable for describing behavioral contracts among classes. Interfaces provide a higher level of abstraction and flexibility because a class can implement multiple interfaces, while it can only inherit from one abstract class.
+在面向對象編程中，抽像類（abstract class）和接口（interface）是兩種用於實現多態性和封裝性的概念。它們有一些相似之處，但也存在一些關鍵區別。
+
+以下是抽像類和接口之間的主要區別：
+
+定義方式：
+
+抽像類：抽像類可以包含方法的實現和屬性，使用abstract關鍵字定義，並可以包含普通方法和抽象方法。抽象方法是一種沒有實現體的方法，必須在子類中被實現。抽像類本身不能被實例化，只能被繼承。
+接口：接口只能包含抽象方法、默認方法和靜態常量，使用interface關鍵字定義。接口中的方法都是抽象的，沒有實現體。類可以實現（implement）一個或多個接口，並實現接口中定義的所有方法。
+繼承與實現：
+
+抽像類：子類繼承抽像類，並可以通過擴展抽像類來繼承其屬性和方法。子類可以擴展抽像類的功能，並覆蓋其方法。一個類只能繼承一個抽像類（單繼承）。
+接口：類通過實現接口來表明其能力，一個類可以實現多個接口（多實現）。實現接口的類必須實現接口中定義的所有方法。
+構造函數：
+
+抽像類：可以有構造函數，並且可以被子類繼承和調用。
+接口：不能有構造函數。接口中只能定義方法和常量。
+訪問修飾符：
+
+抽像類：可以使用不同的訪問修飾符（public、protected、default、private）來定義成員的可見性。
+接口：接口中的方法默認為公共（public），成員變量默認為靜態常量（public static final）。
+使用場景：
+
+抽像類：適用於那些具有共同特徵的類之間的繼承關係。抽像類可以包含一些通用的實現，子類可以在此基礎上進行擴展。
+接口：適用於描述類之間的行為契約。接口定義了一組方法，實現該接口的類必須提供這些方法的具體實現。
+總的來說，抽像類更適合於具有類似行為和屬性的類之間的繼承關係，而接口更適合於描述類之間的行為契約。接口提供了更高程度的抽象和靈活性，因為一個類可以實現多個接口，但只能繼承一個抽像類。
+
+
+#  Entry Level Software Test Engineer
+## Can you explain the difference between functional testing and non-functional testing? Provide examples of each.
+## How would you approach creating an automated testing framework using Java and JavaScript?
+## Describe your experience with test-driven development (TDD) and its benefits.
+## Have you used any testing frameworks like JUnit, TestNG, or Cucumber? Can you explain how you've used them in your previous projects?
+## How would you handle testing in an Agile development environment with frequent iterations and changes?
+## What steps would you take to identify and troubleshoot a defect reported by a developer?
+## Have you worked with cloud-based testing infrastructures? Can you describe your experience and any challenges you faced?
+## How would you ensure the scalability and maintainability of test automation code?
+## Explain the concept of regression testing and its importance in software development.
+## Have you used any load testing tools like JMeter? Can you explain how you've used them to assess system performance?
+## These questions aim to assess your knowledge of software testing concepts, programming skills, experience with testing frameworks and tools, familiarity with agile methodologies, and problem-solving abilities. It's a good idea to review these topics and think about specific examples from your previous experiences that demonstrate your skills and expertise.
