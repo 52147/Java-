@@ -21,6 +21,8 @@
 - 5xx 代表 伺服器端錯誤
   - 這類狀態碼代表伺服器無法完成有效的請求。
   - 500 Internal Server Error: 通用錯誤信息，沒有給出具體的錯誤資訊。伺服器遇到了未曾預料的狀況，導致他無法完成對請求的處理。
+    
+
 | Status Code | Category       | Meaning                                                              |
 |-------------|----------------|----------------------------------------------------------------------|
 | 1xx         | Informational  | The request has been received and the server is still processing it. |
