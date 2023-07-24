@@ -21,5 +21,19 @@
 - 5xx 代表 伺服器端錯誤
   - 這類狀態碼代表伺服器無法完成有效的請求。
   - 500 Internal Server Error: 通用錯誤信息，沒有給出具體的錯誤資訊。伺服器遇到了未曾預料的狀況，導致他無法完成對請求的處理。
-
+| Status Code | Category       | Meaning                                                              |
+|-------------|----------------|----------------------------------------------------------------------|
+| 1xx         | Informational  | The request has been received and the server is still processing it. |
+| 2xx         | Success        | The request was successful and the server has fulfilled it.         |
+| 200         | OK             | The request was successful, and the response body contains the requested data or information.      |
+| 3xx         | Redirection    | Further action is needed to fulfill the request.                    |
+| 301         | Moved Permanently | The requested resource has been permanently moved to a different URL. |
+| 302         | Found/Redirect | The requested resource has been temporarily moved to a different URL.|
+| 304         | Not Modified   | The requested resource has not been modified since the last request, and the cached version can be used.|
+| 4xx         | Client Error   | The client's request contains an error or cannot be fulfilled.      |
+| 400         | Bad Request    | The server cannot understand the client's request, often due to malformed syntax.     |
+| 404         | Not Found      | The requested resource could not be found on the server.            |
+| 5xx         | Server Error   | There was an error on the server while processing the request.      |
+| 500         | Internal Server Error | An unexpected error occurred on the server, preventing it from fulfilling the request.     |
+| 503         | Service Unavailable | The server is currently unable to handle the request due to  maintenance or overload.       |
 https://ithelp.ithome.com.tw/articles/10241979
